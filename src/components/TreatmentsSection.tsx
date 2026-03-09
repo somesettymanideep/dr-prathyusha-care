@@ -45,7 +45,7 @@ const TreatmentsSection = () => {
             ) : (
               <div
                 key={t.title}
-                className={`bg-card rounded-2xl p-6 min-h-[260px] border border-border/50 flex flex-col transition-all duration-500 hover:shadow-lg hover:-translate-y-1 group ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                className={`bg-card rounded-2xl p-6 min-h-[260px] border border-border/50 flex flex-col transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:border-primary/30 group cursor-pointer ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}
               >
                 <t.icon className="h-10 w-10 text-primary mb-auto" strokeWidth={1.5} />
