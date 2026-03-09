@@ -17,8 +17,8 @@ const TestimonialsSection = () => {
   const t = testimonials[current];
 
   return (
-    <section id="testimonials" className="py-20 section-soft-bg">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-20 section-soft-bg" ref={ref}>
+      <div className={`container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="text-center mb-14 space-y-3">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider">Testimonials</p>
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">What Our Patients Say</h2>

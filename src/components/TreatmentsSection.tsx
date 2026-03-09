@@ -36,6 +36,7 @@ const TreatmentsSection = () => {
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default TreatmentsSection;
