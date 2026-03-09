@@ -13,9 +13,11 @@ const qualifications = [
   "Executive Committee Member – VOGS",
 ];
 
-const AboutSection = () => (
-  <section id="about" className="py-20 bg-background">
-    <div className="container mx-auto px-4">
+const AboutSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  return (
+  <section id="about" className="py-20 bg-background" ref={ref}>
+    <div className={`container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative">
           <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
