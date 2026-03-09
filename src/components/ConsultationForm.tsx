@@ -20,6 +20,7 @@ const treatmentOptions = [
 
 const ConsultationForm = () => {
   const [form, setForm] = useState({ name: "", phone: "", email: "", treatment: "", message: "" });
+  const { ref, isVisible } = useScrollAnimation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
