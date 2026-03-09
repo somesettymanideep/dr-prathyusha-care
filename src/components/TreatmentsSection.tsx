@@ -13,9 +13,11 @@ const treatments = [
   { icon: ScanSearch, title: "Freezing / Vitrification", desc: "State-of-the-art cryopreservation techniques for eggs, sperm, and embryos." },
 ];
 
-const TreatmentsSection = () => (
-  <section id="treatments" className="py-20 section-soft-bg">
-    <div className="container mx-auto px-4">
+const TreatmentsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  return (
+  <section id="treatments" className="py-20 section-soft-bg" ref={ref}>
+    <div className={`container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="text-center mb-14 space-y-3">
         <p className="text-primary font-semibold text-sm uppercase tracking-wider">Our Services</p>
         <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">Fertility Treatments</h2>
