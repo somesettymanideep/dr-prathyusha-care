@@ -89,7 +89,7 @@ const FAQSection = () => {
                 value={`item-${index}`}
                 className="border border-border rounded-2xl px-6 data-[state=open]:bg-primary data-[state=open]:border-primary transition-colors"
               >
-                <AccordionTrigger className="text-base font-medium text-foreground hover:no-underline data-[state=open]:text-primary-foreground [&[data-state=open]>svg]:text-primary-foreground">
+                <AccordionTrigger className="text-base font-medium text-[#6a3e74] hover:no-underline data-[state=open]:text-primary-foreground [&[data-state=open]>svg]:text-primary-foreground">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-primary-foreground/80 text-sm">
