@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   { name: "Priya & Rakesh", feedback: "Dr. Prathyusha changed our lives. After years of trying, we finally have our little miracle. Her patience and expertise gave us hope when we had almost given up.", rating: 5 },
