@@ -25,7 +25,7 @@ const TreatmentsSection = () => {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {treatments.map((t) => (
-          <div key={t.title} className="bg-card rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border/50 group">
+          <div key={t.title} className={`bg-card rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border/50 group ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: isVisible ? `${treatments.indexOf(t) * 100}ms` : "0ms" }}>
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
               <t.icon className="h-6 w-6 text-primary" />
             </div>
