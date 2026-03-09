@@ -7,7 +7,7 @@ import eggFreezingImg from "@/assets/treatments/egg-freezing.jpg";
 import embryoFreezingImg from "@/assets/treatments/embryo-freezing.jpg";
 import fertilityPreservationImg from "@/assets/treatments/fertility-preservation.jpg";
 import surrogacyImg from "@/assets/treatments/surrogacy.jpg";
-import doctorImg from "@/assets/doctor-about.jpg";
+import maleFertilityImg from "@/assets/treatments/male-fertility.jpg";
 import ovulationImg from "@/assets/treatments/ovulation.jpg";
 import pgtImg from "@/assets/treatments/pgt.jpg";
 
