@@ -111,7 +111,7 @@ const Contact = () => {
             </div>
 
             {/* Form */}
-            <div className="bg-card rounded-2xl p-8 border border-border/50 shadow-sm">
+            <div className="rounded-2xl p-8 border border-border/50 shadow-sm" style={{ backgroundColor: "#f8f6f9" }}>
               <h2 className="text-3xl font-display font-bold text-foreground mb-2">
                 Send us a <span className="text-primary">message</span>
               </h2>
