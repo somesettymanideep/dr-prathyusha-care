@@ -15,7 +15,7 @@ const HeroSection = () => (
             Compassionate Fertility Care for Your Journey to Parenthood
           </p>
           <p className="text-muted-foreground leading-relaxed max-w-lg">
-            MBBS, MS (OBG), Fellowship in Reproductive Medicine, FMAS — Clinical Director at FertiCARE IVF Centre. Trusted by hundreds of families for exceptional fertility care and successful outcomes.
+            MBBS, MS (OBG), Fellowship in Reproductive Medicine, FMAS — Trusted by hundreds of families for exceptional fertility care and successful outcomes.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <Button variant="hero" asChild>

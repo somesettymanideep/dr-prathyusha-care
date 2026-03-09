@@ -83,7 +83,7 @@ const Contact = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="FertiCARE IVF Centre Location"
+                title="Dr. Prathyusha Javvadi - Clinic Location"
               />
             </div>
           </div>

@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   { name: "Priya & Rakesh", feedback: "Dr. Prathyusha changed our lives. After years of trying, we finally have our little miracle. Her patience and expertise gave us hope when we had almost given up.", rating: 5 },
-  { name: "Sunitha & Vamsi", feedback: "The entire team at FertiCARE made us feel comfortable and supported throughout our IVF journey. We are blessed with twins now!", rating: 5 },
+  { name: "Sunitha & Vamsi", feedback: "Dr. Prathyusha and her team made us feel comfortable and supported throughout our IVF journey. We are blessed with twins now!", rating: 5 },
   { name: "Kavitha & Ravi", feedback: "Exceptional care and professionalism. Dr. Prathyusha explained every step clearly and her success rates speak for themselves. Highly recommended.", rating: 5 },
   { name: "Deepa & Suresh", feedback: "We traveled from Hyderabad specifically for Dr. Prathyusha's expertise. Best decision we ever made. Our daughter is our world now.", rating: 5 },
 ];

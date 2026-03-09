@@ -65,7 +65,7 @@ const Footer = () => (
     </div>
     <div className="border-t border-primary-foreground/10">
       <div className="container mx-auto px-4 py-5 text-center text-sm opacity-60">
-        © {new Date().getFullYear()} FertiCARE IVF Centre. All rights reserved.
+        © {new Date().getFullYear()} Dr. Prathyusha Javvadi. All rights reserved.
       </div>
     </div>
   </footer>
