@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Heart, Users, Award, Stethoscope } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const stats = [
   { icon: Stethoscope, label: "IUI Success Rate", value: "45", suffix: "%" },
