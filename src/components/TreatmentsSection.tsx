@@ -36,15 +36,15 @@ const TreatmentsSection = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {treatments.map((t, i) => {
-            const isActive = t.featured || activeIndex === i;
+            const isActive = activeIndex === i;
             return (
               <div
                 key={t.title}
                 className={`relative rounded-2xl overflow-hidden min-h-[260px] border flex flex-col transition-all duration-500 cursor-pointer ${
                   isActive ? "shadow-xl -translate-y-2 border-primary/30" : "border-border/50 hover:shadow-xl hover:-translate-y-2 hover:border-primary/30"
-                } ${t.featured ? "justify-end p-6" : ""} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}
-                onMouseEnter={() => !t.featured && setActiveIndex(i)}
+                onMouseEnter={() => setActiveIndex(i)}
               >
                 {/* Background image */}
                 <img
