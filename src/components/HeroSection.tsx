@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Award, Heart, Baby } from "lucide-react";
-import doctorImg from "@/assets/doctor-hero-new.png";
+import doctorImg from "@/assets/doctor-image.png";
 
 const HeroSection = () => (
   <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-accent via-background to-muted">
