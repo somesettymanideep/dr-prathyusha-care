@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const treatmentOptions = [
   "Ovulation Induction",
@@ -19,6 +20,7 @@ const treatmentOptions = [
 
 const ConsultationForm = () => {
   const [form, setForm] = useState({ name: "", phone: "", email: "", treatment: "", message: "" });
+  const { ref, isVisible } = useScrollAnimation();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,8 +29,8 @@ const ConsultationForm = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-background" ref={ref}>
+      <div className={`container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10 space-y-3">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider">Get in Touch</p>

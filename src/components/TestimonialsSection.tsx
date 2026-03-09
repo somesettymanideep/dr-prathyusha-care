@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   { name: "Priya & Rakesh", feedback: "Dr. Prathyusha changed our lives. After years of trying, we finally have our little miracle. Her patience and expertise gave us hope when we had almost given up.", rating: 5 },
@@ -10,13 +11,14 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   const [current, setCurrent] = useState(0);
+  const { ref, isVisible } = useScrollAnimation();
   const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
   const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
   const t = testimonials[current];
 
   return (
-    <section id="testimonials" className="py-20 section-soft-bg">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-20 section-soft-bg" ref={ref}>
+      <div className={`container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="text-center mb-14 space-y-3">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider">Testimonials</p>
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">What Our Patients Say</h2>

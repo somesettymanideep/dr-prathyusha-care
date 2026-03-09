@@ -1,4 +1,5 @@
 import { Baby, Microscope, Scissors, Snowflake, HeartPulse, Dna, Syringe, FlaskConical, ScanSearch } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const treatments = [
   { icon: HeartPulse, title: "Ovulation Induction", desc: "Timed intercourse with careful monitoring and medication to optimize natural conception." },
@@ -12,9 +13,11 @@ const treatments = [
   { icon: ScanSearch, title: "Freezing / Vitrification", desc: "State-of-the-art cryopreservation techniques for eggs, sperm, and embryos." },
 ];
 
-const TreatmentsSection = () => (
-  <section id="treatments" className="py-20 section-soft-bg">
-    <div className="container mx-auto px-4">
+const TreatmentsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  return (
+  <section id="treatments" className="py-20 section-soft-bg" ref={ref}>
+    <div className={`container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="text-center mb-14 space-y-3">
         <p className="text-primary font-semibold text-sm uppercase tracking-wider">Our Services</p>
         <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">Fertility Treatments</h2>
@@ -22,7 +25,7 @@ const TreatmentsSection = () => (
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {treatments.map((t) => (
-          <div key={t.title} className="bg-card rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border/50 group">
+          <div key={t.title} className={`bg-card rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-border/50 group ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: isVisible ? `${treatments.indexOf(t) * 100}ms` : "0ms" }}>
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
               <t.icon className="h-6 w-6 text-primary" />
             </div>
@@ -33,6 +36,7 @@ const TreatmentsSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default TreatmentsSection;
