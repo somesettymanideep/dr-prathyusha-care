@@ -37,9 +37,11 @@ const AnimatedCounter = ({ target, suffix }: { target: number; suffix: string })
   return <div ref={ref} className="text-4xl lg:text-5xl font-display font-bold text-primary">{count}{suffix}</div>;
 };
 
-const StatsSection = () => (
-  <section className="bg-secondary py-16">
-    <div className="container mx-auto px-4">
+const StatsSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+  return (
+  <section className="bg-secondary py-16" ref={ref}>
+    <div className={`container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
         {stats.map((stat) => (
           <div key={stat.label} className="text-center space-y-3">
