@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Award, Heart, Baby } from "lucide-react";
-import doctorImg from "@/assets/doctor-hero.jpg";
+import doctorImg from "@/assets/doctor-hero-new.png";
 
 const HeroSection = () => (
   <section className="relative min-h-[90vh] flex items-center overflow-hidden">
