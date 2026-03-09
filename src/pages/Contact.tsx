@@ -41,7 +41,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {/* Schedule Hours */}
-            <div className="bg-card rounded-2xl p-8 border border-border/50 shadow-sm">
+            <div className="rounded-2xl p-8 border border-border/50 shadow-sm" style={{ backgroundColor: "#f8f6f9" }}>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="font-display font-bold text-lg text-foreground">Schedule hours</h3>
                 <Clock className="h-6 w-6 text-secondary" />
