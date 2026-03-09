@@ -30,7 +30,7 @@ const HeroSection = () => (
           <div className="relative w-80 h-80 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/10">
             <img src={doctorImg} alt="Dr. Prathyusha Javvadi" className="w-full h-full object-cover" />
           </div>
-          <div className="absolute -bottom-4 -left-4 bg-secondary text-secondary-foreground rounded-2xl px-6 py-3 shadow-lg">
+          <div className="absolute bottom-4 left-4 lg:bottom-8 lg:left-0 bg-secondary text-secondary-foreground rounded-2xl px-6 py-3 shadow-lg">
             <p className="text-2xl font-bold">10+</p>
             <p className="text-xs opacity-90">Years Experience</p>
           </div>
