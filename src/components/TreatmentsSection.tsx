@@ -64,10 +64,10 @@ const TreatmentsSection = () => {
                   <t.icon
                     className={`h-10 w-10 transition-colors duration-500 ${
                       isActive ? "text-primary-foreground" : "text-primary"
-                    } ${t.featured ? "mb-4 opacity-80" : "mb-auto"}`}
+                    } mb-auto`}
                     strokeWidth={1.5}
                   />
-                  <div className={t.featured ? "" : "mt-6"}>
+                  <div className="mt-6">
                     <h3 className={`font-display font-bold text-lg mb-1 transition-colors duration-500 ${
                       isActive ? "text-primary-foreground" : "text-foreground"
                     }`}>
