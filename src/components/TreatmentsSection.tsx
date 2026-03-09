@@ -57,12 +57,10 @@ const TreatmentsSection = () => {
                 {/* Overlay */}
                 <div className={`absolute inset-0 bg-secondary/80 transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"}`} />
                 {/* Default white background */}
-                {!t.featured && (
-                  <div className={`absolute inset-0 bg-card transition-opacity duration-500 ${isActive ? "opacity-0" : "opacity-100"}`} />
-                )}
+                <div className={`absolute inset-0 bg-card transition-opacity duration-500 ${isActive ? "opacity-0" : "opacity-100"}`} />
 
                 {/* Content */}
-                <div className={`relative z-10 ${t.featured ? "" : "p-6 flex flex-col h-full"}`}>
+                <div className="relative z-10 p-6 flex flex-col h-full">
                   <t.icon
                     className={`h-10 w-10 transition-colors duration-500 ${
                       isActive ? "text-primary-foreground" : "text-primary"
