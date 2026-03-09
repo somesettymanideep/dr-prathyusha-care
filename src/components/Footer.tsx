@@ -6,9 +6,9 @@ const Footer = () => (
     <div className="container mx-auto px-4 py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="space-y-4">
-          <h3 className="text-2xl font-display font-bold">FertiCARE</h3>
+          <h3 className="text-2xl font-display font-bold">Dr. Prathyusha Javvadi</h3>
           <p className="text-sm opacity-80 leading-relaxed">
-            FertiCARE IVF Centre — Your trusted partner in the journey to parenthood. Led by Dr. Prathyusha Javvadi with over 10 years of expertise.
+            Consultant Fertility Specialist with over 10 years of expertise — your trusted partner in the journey to parenthood.
           </p>
           <div className="flex gap-3 pt-2">
             <a href="https://www.instagram.com/drprathyusha.javvadi" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center hover:bg-primary/40 transition-colors" aria-label="Instagram">
