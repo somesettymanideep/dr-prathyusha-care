@@ -36,15 +36,15 @@ const TreatmentsSection = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {treatments.map((t, i) => {
-            const isActive = t.featured || activeIndex === i;
+            const isActive = activeIndex === i;
             return (
               <div
                 key={t.title}
                 className={`relative rounded-2xl overflow-hidden min-h-[260px] border flex flex-col transition-all duration-500 cursor-pointer ${
                   isActive ? "shadow-xl -translate-y-2 border-primary/30" : "border-border/50 hover:shadow-xl hover:-translate-y-2 hover:border-primary/30"
-                } ${t.featured ? "justify-end p-6" : ""} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}
-                onMouseEnter={() => !t.featured && setActiveIndex(i)}
+                onMouseEnter={() => setActiveIndex(i)}
               >
                 {/* Background image */}
                 <img
@@ -57,19 +57,17 @@ const TreatmentsSection = () => {
                 {/* Overlay */}
                 <div className={`absolute inset-0 bg-secondary/80 transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"}`} />
                 {/* Default white background */}
-                {!t.featured && (
-                  <div className={`absolute inset-0 bg-card transition-opacity duration-500 ${isActive ? "opacity-0" : "opacity-100"}`} />
-                )}
+                <div className={`absolute inset-0 bg-card transition-opacity duration-500 ${isActive ? "opacity-0" : "opacity-100"}`} />
 
                 {/* Content */}
-                <div className={`relative z-10 ${t.featured ? "" : "p-6 flex flex-col h-full"}`}>
+                <div className="relative z-10 p-6 flex flex-col h-full">
                   <t.icon
                     className={`h-10 w-10 transition-colors duration-500 ${
                       isActive ? "text-primary-foreground" : "text-primary"
-                    } ${t.featured ? "mb-4 opacity-80" : "mb-auto"}`}
+                    } mb-auto`}
                     strokeWidth={1.5}
                   />
-                  <div className={t.featured ? "" : "mt-6"}>
+                  <div className="mt-6">
                     <h3 className={`font-display font-bold text-lg mb-1 transition-colors duration-500 ${
                       isActive ? "text-primary-foreground" : "text-foreground"
                     }`}>
