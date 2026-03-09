@@ -24,8 +24,8 @@ const AboutSection = () => {
             <img src={doctorAbout} alt="Dr. Prathyusha Javvadi at clinic" className="w-full h-auto object-cover" />
           </div>
           <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-2xl px-6 py-4 shadow-lg hidden lg:block">
-            <p className="text-sm font-medium">Clinical Director</p>
-            <p className="text-lg font-bold">FertiCARE IVF Centre</p>
+            <p className="text-sm font-medium">Consultant Head</p>
+            <p className="text-lg font-bold">Fertility Specialist</p>
           </div>
         </div>
         <div className="space-y-6">

@@ -7,7 +7,7 @@ const HeroSection = () => (
     <div className="container mx-auto px-4 py-16 lg:py-24">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 animate-fade-in-up">
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider">FertiCARE IVF Centre, Vijayawada</p>
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider">Consultant Fertility Specialist, Vijayawada</p>
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-display font-bold leading-tight text-foreground">
             Dr. Prathyusha <span className="text-gradient">Javvadi</span>
           </h1>
@@ -15,7 +15,7 @@ const HeroSection = () => (
             Compassionate Fertility Care for Your Journey to Parenthood
           </p>
           <p className="text-muted-foreground leading-relaxed max-w-lg">
-            MBBS, MS (OBG), Fellowship in Reproductive Medicine, FMAS — Clinical Director at FertiCARE IVF Centre. Trusted by hundreds of families for exceptional fertility care and successful outcomes.
+            MBBS, MS (OBG), Fellowship in Reproductive Medicine, FMAS — Trusted by hundreds of families for exceptional fertility care and successful outcomes.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <Button variant="hero" asChild>

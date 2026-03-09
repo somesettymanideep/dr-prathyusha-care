@@ -31,8 +31,8 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-display font-bold text-gradient">FertiCARE</span>
-          <span className="text-sm text-muted-foreground hidden sm:inline">IVF Centre</span>
+          <span className="text-2xl font-display font-bold text-gradient">Dr. Prathyusha</span>
+          <span className="text-sm text-muted-foreground hidden sm:inline">Javvadi</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
