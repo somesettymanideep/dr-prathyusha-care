@@ -4,17 +4,14 @@ import { Phone, Award, Heart, Baby } from "lucide-react";
 import doctorImg from "@/assets/doctor-hero-new.png";
 
 const HeroSection = () => (
-  <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-    {/* Background split */}
-    <div className="absolute inset-0 bg-gradient-to-br from-accent via-background to-muted" />
-    
+  <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-accent via-background to-muted">
     {/* Decorative blobs */}
     <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-primary/5 blur-3xl" />
     <div className="absolute bottom-10 right-20 w-96 h-96 rounded-full bg-secondary/5 blur-3xl" />
-    
+
     <div className="relative container mx-auto px-4 py-16 lg:py-8">
       <div className="grid lg:grid-cols-12 gap-8 lg:gap-4 items-center">
-        
+
         {/* Left Content — 7 cols */}
         <div className="lg:col-span-7 space-y-7 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5">
@@ -65,27 +62,27 @@ const HeroSection = () => (
         </div>
 
         {/* Right Image — 5 cols */}
-        <div className="lg:col-span-5 relative flex justify-center">
-          {/* Decorative ring */}
-          <div className="absolute inset-0 m-auto w-[22rem] h-[22rem] lg:w-[26rem] lg:h-[26rem] rounded-full border-2 border-dashed border-primary/15 animate-[spin_40s_linear_infinite]" />
-          
-          {/* Main image */}
-          <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[24rem] lg:h-[24rem] rounded-full overflow-hidden shadow-[0_20px_60px_-15px_hsl(var(--primary)/0.25)] border-4 border-background ring-1 ring-primary/10">
+        <div className="lg:col-span-5 relative flex justify-center items-end">
+          {/* Arch background */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-[90%] rounded-t-[50%] bg-muted/60" />
+
+          {/* Doctor image — natural shape */}
+          <div className="relative z-10 w-[75%] max-w-[380px]">
             <img
               src={doctorImg}
               alt="Dr. Prathyusha Javvadi — Fertility Specialist"
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-contain drop-shadow-2xl"
             />
           </div>
 
           {/* Floating badge — bottom-left */}
-          <div className="absolute bottom-6 -left-2 sm:left-4 lg:left-0 bg-secondary text-secondary-foreground rounded-2xl px-5 py-3 shadow-xl backdrop-blur-sm">
+          <div className="absolute bottom-8 left-0 z-20 bg-secondary text-secondary-foreground rounded-2xl px-5 py-3 shadow-xl">
             <p className="text-2xl font-display font-bold">10+</p>
             <p className="text-[11px] opacity-90 tracking-wide">Years Experience</p>
           </div>
 
           {/* Floating badge — top-right */}
-          <div className="absolute top-8 -right-2 sm:right-2 lg:right-0 bg-primary text-primary-foreground rounded-2xl px-5 py-3 shadow-xl backdrop-blur-sm">
+          <div className="absolute top-12 right-0 z-20 bg-primary text-primary-foreground rounded-2xl px-5 py-3 shadow-xl">
             <p className="text-2xl font-display font-bold">1000+</p>
             <p className="text-[11px] opacity-90 tracking-wide">Happy Families</p>
           </div>
