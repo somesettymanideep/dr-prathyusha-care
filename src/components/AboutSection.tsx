@@ -1,6 +1,7 @@
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import doctorAbout from "@/assets/doctor-about.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const qualifications = [
   "MBBS & MS (OBG) – PSIMS, Vijayawada",
