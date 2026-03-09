@@ -1,4 +1,5 @@
 import { Baby, Microscope, Scissors, Snowflake, HeartPulse, Dna, Syringe, FlaskConical, ScanSearch } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const treatments = [
   { icon: HeartPulse, title: "Ovulation Induction", desc: "Timed intercourse with careful monitoring and medication to optimize natural conception." },
