@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
+import headerBg from "@/assets/page-header-bg.jpg";
 
 const contactDetails = [
   { icon: MapPin, label: "Clinic Address", value: "Moghalrajpuram, Vijayawada, Andhra Pradesh, India" },
@@ -29,11 +30,13 @@ const Contact = () => {
       <Navbar />
 
       {/* Banner */}
-      <section className="bg-secondary py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl lg:text-5xl font-display font-bold text-secondary-foreground mb-4">Contact Us</h1>
-          <div className="flex items-center justify-center gap-2 text-sm text-secondary-foreground/70">
-            <Link to="/" className="hover:text-primary-foreground transition-colors">Home</Link>
+      <section className="relative py-24 lg:py-32 overflow-hidden">
+        <img src={headerBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-foreground/60" />
+        <div className="relative container mx-auto px-4 text-center">
+          <h1 className="text-4xl lg:text-5xl font-display font-bold text-white mb-4">Contact Us</h1>
+          <div className="flex items-center justify-center gap-2 text-sm text-white/80">
+            <Link to="/" className="hover:text-primary transition-colors">Home</Link>
             <ChevronRight className="h-4 w-4" />
             <span>Contact</span>
           </div>
