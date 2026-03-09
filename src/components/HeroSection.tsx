@@ -7,7 +7,7 @@ const HeroSection = () => (
     <div className="container mx-auto px-4 py-16 lg:py-24">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6 animate-fade-in-up">
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider">FertiCARE IVF Centre, Vijayawada</p>
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider">Consultant Fertility Specialist, Vijayawada</p>
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-display font-bold leading-tight text-foreground">
             Dr. Prathyusha <span className="text-gradient">Javvadi</span>
           </h1>
