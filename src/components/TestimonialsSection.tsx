@@ -100,7 +100,8 @@ const TestimonialsSection = () => {
                     />
                   ))}
                 </div>
-                <p className="text-foreground/80 text-sm leading-relaxed mb-5">
+                <Quote className="h-6 w-6 text-primary/30 mb-2" />
+                <p className="text-foreground/80 text-sm leading-relaxed mb-5 italic">
                   "{t.feedback}"
                 </p>
               </div>
