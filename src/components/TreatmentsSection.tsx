@@ -7,7 +7,7 @@ import eggFreezingImg from "@/assets/treatments/egg-freezing.jpg";
 import embryoFreezingImg from "@/assets/treatments/embryo-freezing.jpg";
 import fertilityPreservationImg from "@/assets/treatments/fertility-preservation.jpg";
 import surrogacyImg from "@/assets/treatments/surrogacy.jpg";
-import doctorImg from "@/assets/doctor-about.jpg";
+import maleFertilityImg from "@/assets/treatments/male-fertility.jpg";
 import ovulationImg from "@/assets/treatments/ovulation.jpg";
 import pgtImg from "@/assets/treatments/pgt.jpg";
 
@@ -17,7 +17,7 @@ const treatments = [
   { icon: FlaskConical, title: "Embryo Freezing", desc: "High-quality embryos from IVF are frozen for future use.", img: embryoFreezingImg },
   { icon: HeartPulse, title: "Fertility Preservation", desc: "Egg, sperm, or embryo freezing options for patients.", img: fertilityPreservationImg },
   { icon: Box, title: "Surrogacy Support", desc: "Helping individuals & couples find a trusted surrogate.", img: surrogacyImg },
-  { icon: Syringe, title: "Male Fertility Care", desc: "Comprehensive diagnostic and treatment options.", img: doctorImg, featured: true },
+  { icon: Syringe, title: "Male Fertility Care", desc: "Comprehensive diagnostic and treatment options.", img: maleFertilityImg, featured: true },
   { icon: ScanSearch, title: "Ovulation Induction", desc: "Expert diagnosis and care for couples facing miscarriages.", img: ovulationImg },
   { icon: Dna, title: "PGT (Genetic Testing)", desc: "Screen embryos for your genetic conditions.", img: pgtImg },
 ];
