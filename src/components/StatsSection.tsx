@@ -1,0 +1,58 @@
+import { useEffect, useRef, useState } from "react";
+import { Heart, Users, Award, Stethoscope } from "lucide-react";
+
+const stats = [
+  { icon: Stethoscope, label: "IUI Success Rate", value: "45", suffix: "%" },
+  { icon: Heart, label: "IVF Success Rate", value: "65", suffix: "%" },
+  { icon: Users, label: "Happy Couples", value: "150", suffix: "+" },
+  { icon: Award, label: "Years of Experience", value: "10", suffix: "+" },
+];
+
+const AnimatedCounter = ({ target, suffix }: { target: number; suffix: string }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting && !started) setStarted(true); },
+      { threshold: 0.5 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+    let current = 0;
+    const step = Math.max(1, Math.floor(target / 40));
+    const interval = setInterval(() => {
+      current += step;
+      if (current >= target) { setCount(target); clearInterval(interval); }
+      else setCount(current);
+    }, 30);
+    return () => clearInterval(interval);
+  }, [started, target]);
+
+  return <div ref={ref} className="text-4xl lg:text-5xl font-display font-bold text-primary">{count}{suffix}</div>;
+};
+
+const StatsSection = () => (
+  <section className="bg-secondary py-16">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        {stats.map((stat) => (
+          <div key={stat.label} className="text-center space-y-3">
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/20 mb-2">
+              <stat.icon className="h-7 w-7 text-primary-foreground" />
+            </div>
+            <AnimatedCounter target={parseInt(stat.value)} suffix={stat.suffix} />
+            <p className="text-secondary-foreground/80 text-sm font-medium">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+export default StatsSection;
