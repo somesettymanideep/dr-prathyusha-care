@@ -45,10 +45,10 @@ const TreatmentsSection = () => {
             ) : (
               <div
                 key={t.title}
-                className={`bg-card rounded-2xl p-6 min-h-[260px] border border-border/50 flex flex-col transition-all duration-500 hover:shadow-lg hover:-translate-y-1 group ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                className={`bg-card rounded-2xl p-6 min-h-[260px] border border-border/50 flex flex-col transition-all duration-500 hover:shadow-xl hover:-translate-y-2 hover:border-primary/30 group cursor-pointer ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}
               >
-                <t.icon className="h-10 w-10 text-primary mb-auto" strokeWidth={1.5} />
+                <t.icon className="h-10 w-10 text-primary mb-auto transition-transform duration-300 group-hover:scale-110" strokeWidth={1.5} />
                 <div className="mt-6">
                   <h3 className="font-display font-bold text-lg text-foreground mb-2">{t.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{t.desc}</p>
