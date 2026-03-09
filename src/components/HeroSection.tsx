@@ -64,7 +64,7 @@ const HeroSection = () => (
         {/* Right Image — 5 cols */}
         <div className="lg:col-span-5 relative flex justify-center items-end">
           {/* Arch background */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-[90%] rounded-t-[50%] bg-muted/60" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-[90%] rounded-t-[50%] bg-primary/10 border border-primary/15" />
 
           {/* Doctor image — natural shape */}
           <div className="relative z-10 w-[75%] max-w-[380px]">
