@@ -66,12 +66,12 @@ const HeroSection = () => (
           {/* Arch background */}
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-[90%] rounded-t-[50%] bg-primary/10 border border-primary/15" />
 
-          {/* Doctor image — natural shape */}
+          {/* Doctor image — natural shape, no background */}
           <div className="relative z-10 w-[75%] max-w-[380px]">
             <img
               src={doctorImg}
               alt="Dr. Prathyusha Javvadi — Fertility Specialist"
-              className="w-full h-auto object-contain drop-shadow-2xl"
+              className="w-full h-auto object-contain"
             />
           </div>
 
