@@ -31,16 +31,14 @@ const ConsultationForm = () => {
 
   return (
     <section className="relative py-20 overflow-hidden" ref={ref}>
-      {/* Background image on the right */}
+      {/* Full background image */}
       <div className="absolute inset-0">
-        <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
-          <img
-            src={consultationBg}
-            alt="Happy mother with baby"
-            className="w-full h-full object-cover grayscale opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent" />
-        </div>
+        <img
+          src={consultationBg}
+          alt="Happy mother with baby"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/80 lg:bg-gradient-to-r lg:from-background lg:via-background/85 lg:to-background/40" />
       </div>
 
       <div className={`container mx-auto px-4 relative z-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
