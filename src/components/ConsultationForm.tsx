@@ -38,7 +38,7 @@ const ConsultationForm = () => {
           alt="Happy mother with baby"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/80 lg:bg-gradient-to-r lg:from-background lg:via-background/85 lg:to-background/40" />
+        <div className="absolute inset-0 bg-background/70 lg:bg-gradient-to-r lg:from-background/95 lg:via-background/70 lg:to-transparent" />
       </div>
 
       <div className={`container mx-auto px-4 relative z-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
