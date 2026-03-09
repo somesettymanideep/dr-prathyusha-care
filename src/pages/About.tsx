@@ -102,19 +102,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {milestones.map((m) => (
-              <div key={m.label} className="text-center">
-                <p className="text-4xl lg:text-5xl font-display font-bold text-primary mb-2">{m.number}</p>
-                <p className="text-secondary-foreground/80 text-sm">{m.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Education & Qualifications */}
       <section className="py-20 section-soft-bg">
