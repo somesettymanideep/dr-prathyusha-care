@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
+import headerBg from "@/assets/page-header-bg.jpg";
 
 const contactDetails = [
   { icon: MapPin, label: "Clinic Address", value: "Moghalrajpuram, Vijayawada, Andhra Pradesh, India" },
