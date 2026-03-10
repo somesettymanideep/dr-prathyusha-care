@@ -171,9 +171,11 @@ const About = () => {
               </p>
               <div className="space-y-4">
                 {memberships.map((m) => (
-                  <div key={m} className="flex items-start gap-3">
-                    <Award className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span className="text-foreground/80 text-sm">{m}</span>
+                  <div key={m} className="group flex items-start gap-3 bg-card rounded-xl p-4 border border-border/50 shadow-sm hover:shadow-lg hover:bg-primary hover:border-primary transition-all duration-300 cursor-default">
+                    <div className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center transition-colors duration-300">
+                      <Award className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                    </div>
+                    <span className="text-foreground/80 text-sm mt-1.5 group-hover:text-primary-foreground transition-colors duration-300">{m}</span>
                   </div>
                 ))}
               </div>
