@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import footerBg from "@/assets/footer-bg.jpg";
 
 const Footer = () => (
-  <footer className="bg-secondary text-secondary-foreground">
+  <footer className="relative text-secondary-foreground">
+    <div
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${footerBg})` }}
+    />
+    <div className="absolute inset-0 bg-secondary/90" />
     <div className="container mx-auto px-6 md:px-10 lg:px-16 py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="space-y-4">
