@@ -185,8 +185,8 @@ const About = () => {
                 Dr. Prathyusha is an active member of several prestigious national medical organizations, contributing to the advancement of reproductive medicine through research, education, and leadership.
               </p>
               <div className="space-y-4">
-                {memberships.map((m) => (
-                  <div key={m} className="group flex items-start gap-3 bg-card rounded-xl p-4 border border-border/50 shadow-sm hover:shadow-lg hover:bg-primary hover:border-primary transition-all duration-300 cursor-default">
+                {memberships.map((m, i) => (
+                  <div key={m} className={`group flex items-start gap-3 bg-card rounded-xl p-4 border border-border/50 shadow-sm hover:shadow-lg hover:bg-primary hover:border-primary transition-all duration-300 cursor-default ${staggeredItem(memberAnim.isVisible, i)}`} style={{ transitionDelay: memberAnim.isVisible ? `${i * 120}ms` : "0ms" }}>
                     <div className="flex-shrink-0 w-9 h-9 rounded-full bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center transition-colors duration-300">
                       <Award className="h-5 w-5 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                     </div>
