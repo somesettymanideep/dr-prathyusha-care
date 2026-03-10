@@ -17,6 +17,7 @@ import {
 import headerBg from "@/assets/page-header-bg.jpg";
 import doctorAbout from "@/assets/doctor-about.jpg";
 import doctorHero from "@/assets/doctor-hero.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const education = [
   { degree: "MBBS", institution: "PSIMS, Vijayawada", detail: "Foundation in medical sciences with distinction" },
