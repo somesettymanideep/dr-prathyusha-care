@@ -123,7 +123,12 @@ const TestimonialsSection = () => {
   const visible = testimonials.slice(activeIdx, activeIdx + cardsPerView);
 
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-muted/30" ref={ref}>
+    <section id="testimonials" className="relative py-20 lg:py-28" ref={ref}>
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${footerBg})` }}
+      />
+      <div className="absolute inset-0 bg-secondary/85" />
       <div
         className={`container mx-auto px-4 transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
