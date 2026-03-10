@@ -14,10 +14,24 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [treatmentsOpen, setTreatmentsOpen] = useState(false);
+  const [mobileTreatmentsOpen, setMobileTreatmentsOpen] = useState(false);
   const location = useLocation();
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setTreatmentsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleNavClick = (path: string) => {
     setOpen(false);
+    setTreatmentsOpen(false);
     if (path.startsWith("/#")) {
       const id = path.slice(2);
       if (location.pathname === "/") {
@@ -37,16 +51,49 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.path.startsWith("/#") ? "/" : link.path}
-              onClick={() => handleNavClick(link.path)}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.hasDropdown ? (
+              <div key={link.label} className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setTreatmentsOpen(!treatmentsOpen)}
+                  className="flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                >
+                  {link.label}
+                  <ChevronDown className={`h-3.5 w-3.5 transition-transform ${treatmentsOpen ? "rotate-180" : ""}`} />
+                </button>
+                {treatmentsOpen && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-background border border-border rounded-xl shadow-lg py-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <Link
+                      to="/"
+                      onClick={() => handleNavClick("/#treatments")}
+                      className="block px-4 py-2.5 text-sm font-semibold text-primary hover:bg-accent/50 transition-colors border-b border-border/50"
+                    >
+                      All Treatments
+                    </Link>
+                    {treatments.map((t) => (
+                      <Link
+                        key={t.slug}
+                        to={`/treatments/${t.slug}`}
+                        onClick={() => { setTreatmentsOpen(false); }}
+                        className="block px-4 py-2.5 text-sm text-foreground/80 hover:text-primary hover:bg-accent/50 transition-colors"
+                      >
+                        {t.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.path.startsWith("/#") ? "/" : link.path}
+                onClick={() => handleNavClick(link.path)}
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
         </div>
 
         <div className="hidden md:flex items-center gap-3">
@@ -66,16 +113,49 @@ const Navbar = () => {
 
       {open && (
         <div className="md:hidden border-t bg-background px-4 pb-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              to={link.path.startsWith("/#") ? "/" : link.path}
-              onClick={() => handleNavClick(link.path)}
-              className="block py-3 text-sm font-medium text-foreground/80 hover:text-primary border-b border-border/50"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.hasDropdown ? (
+              <div key={link.label}>
+                <button
+                  onClick={() => setMobileTreatmentsOpen(!mobileTreatmentsOpen)}
+                  className="flex items-center justify-between w-full py-3 text-sm font-medium text-foreground/80 hover:text-primary border-b border-border/50"
+                >
+                  {link.label}
+                  <ChevronDown className={`h-4 w-4 transition-transform ${mobileTreatmentsOpen ? "rotate-180" : ""}`} />
+                </button>
+                {mobileTreatmentsOpen && (
+                  <div className="pl-4 border-b border-border/50">
+                    <Link
+                      to="/"
+                      onClick={() => handleNavClick("/#treatments")}
+                      className="block py-2.5 text-sm font-semibold text-primary"
+                    >
+                      All Treatments
+                    </Link>
+                    {treatments.map((t) => (
+                      <Link
+                        key={t.slug}
+                        to={`/treatments/${t.slug}`}
+                        onClick={() => setOpen(false)}
+                        className="block py-2.5 text-sm text-foreground/70 hover:text-primary transition-colors"
+                      >
+                        {t.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                key={link.label}
+                to={link.path.startsWith("/#") ? "/" : link.path}
+                onClick={() => handleNavClick(link.path)}
+                className="block py-3 text-sm font-medium text-foreground/80 hover:text-primary border-b border-border/50"
+              >
+                {link.label}
+              </Link>
+            )
+          )}
           <Button variant="hero" className="w-full mt-4" asChild>
             <Link to="/contact">Book Consultation</Link>
           </Button>
