@@ -23,7 +23,7 @@ const Contact = () => {
       <Navbar />
 
       {/* Banner */}
-      <section className="relative py-24 lg:py-32 overflow-hidden">
+      <section className="relative h-[400px] flex items-center overflow-hidden">
         <img src={headerBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(114, 52, 129, 0.75)" }} />
         <div className="relative container mx-auto px-4 text-center">
