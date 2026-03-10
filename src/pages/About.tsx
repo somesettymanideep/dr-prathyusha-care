@@ -117,15 +117,15 @@ const About = () => {
             {education.map((edu, i) => (
               <div
                 key={edu.degree}
-                className="flex items-start gap-6 bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300"
+                className="group flex items-start gap-6 bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-lg hover:bg-primary hover:border-primary transition-all duration-300"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <GraduationCap className="h-6 w-6 text-primary" />
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center transition-colors duration-300">
+                  <GraduationCap className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-lg text-foreground">{edu.degree}</h3>
-                  <p className="text-primary text-sm font-semibold">{edu.institution}</p>
-                  <p className="text-muted-foreground text-sm mt-1">{edu.detail}</p>
+                  <h3 className="font-display font-bold text-lg text-foreground group-hover:text-primary-foreground transition-colors duration-300">{edu.degree}</h3>
+                  <p className="text-primary text-sm font-semibold group-hover:text-primary-foreground/80 transition-colors duration-300">{edu.institution}</p>
+                  <p className="text-muted-foreground text-sm mt-1 group-hover:text-primary-foreground/70 transition-colors duration-300">{edu.detail}</p>
                 </div>
               </div>
             ))}
@@ -144,13 +144,13 @@ const About = () => {
             {expertise.map((item) => (
               <div
                 key={item.title}
-                className="bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-primary/30 transition-all duration-300 text-center"
+                className="group bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:bg-primary hover:border-primary transition-all duration-300 text-center"
               >
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="h-7 w-7 text-primary" />
+                <div className="w-14 h-14 rounded-full bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center mx-auto mb-4 transition-colors duration-300">
+                  <item.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                 </div>
-                <h3 className="font-display font-bold text-foreground mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-display font-bold text-foreground group-hover:text-primary-foreground mb-2 transition-colors duration-300">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-primary-foreground/70 transition-colors duration-300">{item.desc}</p>
               </div>
             ))}
           </div>
