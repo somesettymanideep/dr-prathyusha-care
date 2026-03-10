@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { treatments } from "@/data/treatmentData";
 
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  { label: "Treatments", path: "/#treatments" },
+  { label: "Treatments", path: "/#treatments", hasDropdown: true },
   { label: "Testimonials", path: "/testimonials" },
   { label: "Contact", path: "/contact" },
 ];
