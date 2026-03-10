@@ -25,7 +25,7 @@ const ConsultationForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Your appointment request has been submitted! We'll contact you shortly.");
+    toast.success("Your consultation request has been submitted! We'll contact you shortly.");
     setForm({ name: "", phone: "", email: "", treatment: "", date: "" });
   };
 
@@ -47,10 +47,10 @@ const ConsultationForm = () => {
           <div className="mb-10 space-y-3">
             <div className="flex items-center gap-2">
               <Stethoscope className="w-5 h-5 text-primary" />
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider">Make Appointment</p>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider">Book Consultation</p>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-3xl font-display font-bold">
-              <span className="text-secondary">Make An</span> <span className="text-primary">Appointment</span>
+              <span className="text-secondary">Book Your</span> <span className="text-primary">Consultation</span>
             </h2>
           </div>
 
@@ -111,7 +111,7 @@ const ConsultationForm = () => {
                 </SelectContent>
               </Select>
               <Button type="submit" variant="hero" className="rounded-full h-12 gap-2">
-                Appointment <ArrowRight className="w-4 h-4" />
+                Book Consultation <ArrowRight className="w-4 h-4" />
               </Button>
             </div>
           </form>
