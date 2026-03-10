@@ -81,35 +81,77 @@ const About = () => {
       </section>
 
       {/* Main Bio Section */}
-      <section className="py-20" ref={bioAnim.ref}>
+      <section className="py-24" ref={bioAnim.ref}>
         <div className={`container mx-auto px-4 ${animClass(bioAnim.isVisible)}`}>
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
-                <img src={doctorAbout} alt="Dr. Prathyusha Javvadi" className="w-full h-auto object-cover" />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-2xl px-6 py-4 shadow-lg hidden lg:block">
-                <p className="text-sm font-medium">Consultant Head</p>
-                <p className="text-lg font-bold">Fertility Specialist</p>
+          {/* Top: Name + Title centered */}
+          <div className="text-center mb-16 space-y-3">
+            <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em]">Meet Your Doctor</p>
+            <h2 className="text-4xl lg:text-5xl font-display font-extrabold text-foreground">
+              Dr. Prathyusha Javvadi
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              MBBS &middot; MS (OBG) &middot; FRM &middot; FMAS
+            </p>
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full mt-4" />
+          </div>
+
+          {/* Layout: Image left, Bio right */}
+          <div className="grid lg:grid-cols-5 gap-12 items-start">
+            {/* Image Column - 2 cols */}
+            <div className="lg:col-span-2">
+              <div className="relative sticky top-28">
+                <div className="rounded-3xl overflow-hidden border-4 border-primary/15">
+                  <img src={doctorAbout} alt="Dr. Prathyusha Javvadi" className="w-full aspect-[3/4] object-cover" />
+                </div>
+                {/* Floating badge */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground rounded-full px-6 py-2.5 shadow-xl text-sm font-bold tracking-wide whitespace-nowrap">
+                  Consultant Fertility Specialist
+                </div>
               </div>
             </div>
-            <div className="space-y-6">
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider">Meet Your Doctor</p>
-              <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">
-                Dr. Prathyusha Javvadi
-              </h2>
-              <p className="text-lg text-muted-foreground italic">
-                MBBS, MS (OBG), Fellowship in Reproductive Medicine, FMAS
+
+            {/* Bio Column - 3 cols */}
+            <div className="lg:col-span-3 space-y-8">
+              {/* Intro paragraph - larger */}
+              <p className="text-xl lg:text-2xl text-foreground font-medium leading-relaxed">
+                A compassionate fertility specialist dedicated to turning your dream of parenthood into reality.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Dr. Prathyusha Javvadi is a distinguished Consultant Fertility Specialist based in Vijayawada, Andhra Pradesh. With over a decade of dedicated experience in reproductive medicine, she has been at the forefront of helping hundreds of families realize their dream of parenthood.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Her journey in medicine began with a deep passion for women's health, which led her to specialize in obstetrics and gynecology, and subsequently pursue advanced training in assisted reproductive technologies. Her compassionate approach, combined with expertise in cutting-edge fertility treatments, has earned her the trust of patients across the region.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                As the Consultant Head at Ferticare IVF Centre, Dr. Prathyusha leads a team of skilled professionals dedicated to providing personalized, evidence-based fertility care. She believes that every patient's journey is unique, and tailors treatment plans to maximize the chances of a successful outcome.
-              </p>
+
+              <div className="h-px bg-border" />
+
+              {/* Bio paragraphs */}
+              <div className="space-y-5 text-muted-foreground leading-relaxed">
+                <p>
+                  With over a decade of experience in reproductive medicine, Dr. Prathyusha has been at the forefront of helping hundreds of families across Andhra Pradesh achieve successful pregnancies through advanced fertility treatments.
+                </p>
+                <p>
+                  Her journey began with a deep passion for women's health, leading to specializations in obstetrics, gynecology, and assisted reproductive technologies from India's premier institutions including Southend Infertility (New Delhi) and Fortis Hospital.
+                </p>
+                <p>
+                  As the Consultant Head at her fertility practice, she leads with a patient-first philosophy — listening carefully, creating personalized treatment plans, and providing transparent, compassionate care at every step of the journey.
+                </p>
+              </div>
+
+              {/* Mini stats row */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+                {milestones.map((m) => (
+                  <div key={m.label} className="text-center p-4 rounded-2xl bg-accent/50 border border-border/50">
+                    <p className="text-2xl lg:text-3xl font-display font-extrabold text-primary">{m.number}</p>
+                    <p className="text-xs text-muted-foreground font-medium mt-1 uppercase tracking-wide">{m.label}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="h-px bg-border" />
+
+              {/* Quick highlights */}
+              <div className="flex flex-wrap gap-3">
+                {["IVF & ICSI", "IUI", "Egg Freezing", "Laparoscopy", "Recurrent Loss Care", "Male Infertility"].map((tag) => (
+                  <span key={tag} className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold border border-primary/20">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
