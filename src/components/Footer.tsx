@@ -69,7 +69,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="border-t border-primary-foreground/10">
+    <div className="relative z-10 border-t border-primary-foreground/10">
       <div className="container mx-auto px-4 py-5 text-center text-sm opacity-60">
         © {new Date().getFullYear()} Dr. Prathyusha Javvadi. All rights reserved.
       </div>
