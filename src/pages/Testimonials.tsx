@@ -74,17 +74,17 @@ const videoTestimonials = [
   {
     name: "Swathi & Arun",
     description: "Our IVF success story after 5 years of waiting",
-    thumbnail: testimonialsBg,
+    youtubeId: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
   },
   {
     name: "Deepa & Mahesh",
     description: "How Dr. Prathyusha changed our lives with compassionate care",
-    thumbnail: testimonialsBg,
+    youtubeId: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
   },
   {
     name: "Radha & Kiran",
     description: "From hopelessness to holding our baby — our journey",
-    thumbnail: testimonialsBg,
+    youtubeId: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
   },
 ];
 
@@ -267,24 +267,19 @@ const Testimonials = () => {
             {videoTestimonials.map((v, i) => (
               <div
                 key={v.name}
-                className={`group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer ${videoAnim.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                className={`group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${videoAnim.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 style={{ transitionDelay: videoAnim.isVisible ? `${i * 150}ms` : "0ms" }}
               >
-                {/* Thumbnail */}
-                <div className="relative aspect-video">
-                  <img
-                    src={v.thumbnail}
-                    alt={v.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                {/* YouTube Embed */}
+                <div className="aspect-video">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${v.youtubeId}`}
+                    title={v.name}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-foreground/40 group-hover:bg-foreground/30 transition-colors" />
-
-                  {/* Play button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-primary/90 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                      <Play className="h-7 w-7 text-primary-foreground ml-1" fill="currentColor" />
-                    </div>
-                  </div>
                 </div>
 
                 {/* Info */}
