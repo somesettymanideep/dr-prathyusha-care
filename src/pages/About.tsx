@@ -17,6 +17,7 @@ import {
 import headerBg from "@/assets/page-header-bg.jpg";
 import doctorAbout from "@/assets/doctor-about.jpg";
 import doctorHero from "@/assets/doctor-hero.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const education = [
   { degree: "MBBS", institution: "PSIMS, Vijayawada", detail: "Foundation in medical sciences with distinction" },
@@ -49,6 +50,16 @@ const milestones = [
 ];
 
 const About = () => {
+  const bioAnim = useScrollAnimation();
+  const eduAnim = useScrollAnimation();
+  const expertAnim = useScrollAnimation();
+  const memberAnim = useScrollAnimation();
+  const philoAnim = useScrollAnimation();
+  const ctaAnim = useScrollAnimation();
+
+  const animClass = (isVisible: boolean) =>
+    `transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
+
   return (
     <div className="min-h-screen bg-background font-body">
       <Navbar />
@@ -68,8 +79,8 @@ const About = () => {
       </section>
 
       {/* Main Bio Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20" ref={bioAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(bioAnim.isVisible)}`}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
@@ -104,8 +115,8 @@ const About = () => {
 
 
       {/* Education & Qualifications */}
-      <section className="py-20 section-soft-bg">
-        <div className="container mx-auto px-4">
+      <section className="py-20 section-soft-bg" ref={eduAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(eduAnim.isVisible)}`}>
           <div className="text-center mb-14 space-y-3">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider">Qualifications</p>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">Education & Training</h2>
@@ -134,8 +145,8 @@ const About = () => {
       </section>
 
       {/* Areas of Expertise */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20" ref={expertAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(expertAnim.isVisible)}`}>
           <div className="text-center mb-14 space-y-3">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider">Specializations</p>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">Areas of Expertise</h2>
@@ -158,8 +169,8 @@ const About = () => {
       </section>
 
       {/* Professional Memberships */}
-      <section className="py-20 section-soft-bg">
-        <div className="container mx-auto px-4">
+      <section className="py-20 section-soft-bg" ref={memberAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(memberAnim.isVisible)}`}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Professional Affiliations</p>
@@ -188,8 +199,8 @@ const About = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20" ref={philoAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(philoAnim.isVisible)}`}>
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider">My Philosophy</p>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">
@@ -204,8 +215,8 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center space-y-6">
+      <section className="py-16 bg-primary" ref={ctaAnim.ref}>
+        <div className={`container mx-auto px-4 text-center space-y-6 ${animClass(ctaAnim.isVisible)}`}>
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-primary-foreground">
             Ready to Start Your Journey?
           </h2>
