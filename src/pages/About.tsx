@@ -199,8 +199,8 @@ const About = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20" ref={philoAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(philoAnim.isVisible)}`}>
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider">My Philosophy</p>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">
