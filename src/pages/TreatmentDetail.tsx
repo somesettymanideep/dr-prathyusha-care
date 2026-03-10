@@ -258,12 +258,12 @@ const TreatmentDetail = () => {
                 <AccordionItem
                   key={i}
                   value={`faq-${i}`}
-                  className="bg-card border border-border/50 rounded-xl px-6 shadow-sm data-[state=open]:shadow-md transition-shadow"
+                  className="border border-border rounded-2xl px-6 data-[state=open]:bg-primary data-[state=open]:border-primary shadow-sm data-[state=open]:shadow-lg transition-all duration-300"
                 >
-                  <AccordionTrigger className="text-left font-display font-bold text-foreground hover:text-primary py-5 text-base">
+                  <AccordionTrigger className="text-left font-display font-bold text-secondary hover:no-underline py-5 text-base data-[state=open]:text-primary-foreground [&[data-state=open]>svg]:text-primary-foreground">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pb-5">
+                  <AccordionContent className="text-primary-foreground/85 leading-relaxed pb-5">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
