@@ -145,8 +145,8 @@ const About = () => {
       </section>
 
       {/* Areas of Expertise */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20" ref={expertAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(expertAnim.isVisible)}`}>
           <div className="text-center mb-14 space-y-3">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider">Specializations</p>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">Areas of Expertise</h2>
