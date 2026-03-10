@@ -215,8 +215,8 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-primary">
-        <div className="container mx-auto px-4 text-center space-y-6">
+      <section className="py-16 bg-primary" ref={ctaAnim.ref}>
+        <div className={`container mx-auto px-4 text-center space-y-6 ${animClass(ctaAnim.isVisible)}`}>
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-primary-foreground">
             Ready to Start Your Journey?
           </h2>
