@@ -6,8 +6,8 @@ import statsBg from "@/assets/stats-bg.jpg";
 const stats = [
   { icon: HeartPulse, label: "IUI Success Rate", value: "45", suffix: "%" },
   { icon: Baby, label: "IVF Success Rate", value: "65", suffix: "%" },
-  { icon: SmilePlus, label: "Happy Couples", value: "150", suffix: "+" },
-  { icon: CalendarHeart, label: "Years of Experience", value: "10", suffix: "+" },
+  { icon: HeartHandshake, label: "Happy Couples", value: "150", suffix: "+" },
+  { icon: Trophy, label: "Years of Experience", value: "10", suffix: "+" },
 ];
 
 const AnimatedCounter = ({ target, suffix }: { target: number; suffix: string }) => {
