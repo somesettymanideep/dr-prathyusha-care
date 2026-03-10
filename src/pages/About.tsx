@@ -115,8 +115,8 @@ const About = () => {
 
 
       {/* Education & Qualifications */}
-      <section className="py-20 section-soft-bg">
-        <div className="container mx-auto px-4">
+      <section className="py-20 section-soft-bg" ref={eduAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(eduAnim.isVisible)}`}>
           <div className="text-center mb-14 space-y-3">
             <p className="text-primary font-semibold text-sm uppercase tracking-wider">Qualifications</p>
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">Education & Training</h2>
