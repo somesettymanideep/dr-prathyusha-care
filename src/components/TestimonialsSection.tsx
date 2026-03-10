@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
+import footerBg from "@/assets/footer-bg.jpg";
 
 import customer1 from "@/assets/testimonials/customer-1.png";
 import customer2 from "@/assets/testimonials/customer-2.png";
