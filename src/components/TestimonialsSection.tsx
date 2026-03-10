@@ -126,7 +126,7 @@ const TestimonialsSection = () => {
     <section id="testimonials" className="relative py-20 lg:py-28" ref={ref}>
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${footerBg})` }}
+        style={{ backgroundImage: `url(${testimonialsBg})` }}
       />
       <div className="absolute inset-0 bg-secondary/85" />
       <div
