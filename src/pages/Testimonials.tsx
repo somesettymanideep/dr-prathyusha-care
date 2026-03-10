@@ -270,6 +270,11 @@ const Testimonials = () => {
                 className={`group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${videoAnim.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
                 style={{ transitionDelay: videoAnim.isVisible ? `${i * 150}ms` : "0ms" }}
               >
+                {/* Heading above video */}
+                <div className="p-4 bg-card text-center">
+                  <p className="font-display font-bold text-foreground">{v.name}</p>
+                </div>
+
                 {/* YouTube Embed */}
                 <div className="aspect-video">
                   <iframe
@@ -280,11 +285,6 @@ const Testimonials = () => {
                     className="w-full h-full"
                     loading="lazy"
                   />
-                </div>
-
-                {/* Info */}
-                <div className="p-4 bg-card text-center">
-                  <p className="font-display font-bold text-foreground">{v.name}</p>
                 </div>
               </div>
             ))}
