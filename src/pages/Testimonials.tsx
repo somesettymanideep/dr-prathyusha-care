@@ -144,57 +144,8 @@ const Testimonials = () => {
         </div>
       </section>
 
-      {/* Text Testimonials Grid */}
-      <section className="py-24" ref={textAnim.ref}>
-        <div className={`container mx-auto px-4 ${animClass(textAnim.isVisible)}`}>
-          <div className="text-center mb-16 space-y-3">
-            <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em]">Patient Reviews</p>
-            <h2 className="text-3xl lg:text-4xl font-display font-extrabold text-foreground">
-              Stories That Inspire Hope
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Every review represents a family's journey to joy. Here's what our patients have to say.
-            </p>
-            <div className="w-16 h-1 bg-primary mx-auto rounded-full mt-4" />
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {textTestimonials.map((t, i) => (
-              <div
-                key={t.name}
-                className={`group relative bg-card rounded-2xl p-7 border border-border/50 shadow-sm hover:shadow-xl transition-all duration-500 ${textAnim.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                style={{ transitionDelay: textAnim.isVisible ? `${i * 120}ms` : "0ms" }}
-              >
-                {/* Quote icon */}
-                <Quote className="absolute top-5 right-5 h-8 w-8 text-primary/10 group-hover:text-primary/20 transition-colors" />
-
-                {/* Patient info */}
-                <div className="flex items-center gap-4 mb-5">
-                  <img
-                    src={t.photo}
-                    alt={t.name}
-                    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
-                  />
-                  <div>
-                    <p className="font-display font-bold text-foreground">{t.name}</p>
-                    <StarRating rating={t.rating} />
-                  </div>
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  "{t.text}"
-                </p>
-
-                {/* Treatment tag */}
-                <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20">
-                  {t.treatment}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Text Testimonials Slider */}
+      <TestimonialsSlider textAnim={textAnim} />
 
       {/* Video Testimonials */}
       <section className="py-24 section-soft-bg" ref={videoAnim.ref}>
