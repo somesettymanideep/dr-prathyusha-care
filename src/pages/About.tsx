@@ -130,7 +130,8 @@ const About = () => {
             {education.map((edu, i) => (
               <div
                 key={edu.degree}
-                className="group flex items-start gap-6 bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-lg hover:bg-primary hover:border-primary transition-all duration-300"
+                className={`group flex items-start gap-6 bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-lg hover:bg-primary hover:border-primary transition-all duration-300 ${staggeredItem(eduAnim.isVisible, i)}`}
+                style={{ transitionDelay: eduAnim.isVisible ? `${i * 150}ms` : "0ms" }}
               >
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center transition-colors duration-300">
                   <GraduationCap className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
