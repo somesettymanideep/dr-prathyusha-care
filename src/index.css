@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -39,7 +39,7 @@
     --hero-gradient: linear-gradient(135deg, hsl(340 85% 53% / 0.08), hsl(289 30% 35% / 0.06));
     --section-soft: 289 20% 97%;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
 
   .dark {
@@ -73,7 +73,7 @@
     @apply bg-background text-foreground;
   }
   h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
