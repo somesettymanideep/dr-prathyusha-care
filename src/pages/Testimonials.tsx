@@ -72,18 +72,15 @@ const textTestimonials = [
 
 const videoTestimonials = [
   {
-    name: "Swathi & Arun",
-    description: "Our IVF success story after 5 years of waiting",
+    name: "IVF Success Story",
     youtubeId: "ldd3ry2_G1s",
   },
   {
-    name: "Deepa & Mahesh",
-    description: "How Dr. Prathyusha changed our lives with compassionate care",
+    name: "Patient Happy Moments",
     youtubeId: "QZsHEuxZMy0",
   },
   {
-    name: "Radha & Kiran",
-    description: "From hopelessness to holding our baby — our journey",
+    name: "Fertility Treatment Journey",
     youtubeId: "fOpWVXkp9tA",
   },
 ];
