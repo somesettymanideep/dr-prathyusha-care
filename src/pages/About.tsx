@@ -146,8 +146,12 @@ const About = () => {
 
               {/* Quick highlights */}
               <div className="flex flex-wrap gap-3">
-                {["IVF & ICSI", "IUI", "Egg Freezing", "Laparoscopy", "Recurrent Loss Care", "Male Infertility"].map((tag) => (
-                  <span key={tag} className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold border border-primary/20">
+                {["IVF & ICSI", "IUI", "Egg Freezing", "Laparoscopy", "Recurrent Loss Care", "Male Infertility"].map((tag, i) => (
+                  <span
+                    key={tag}
+                    className={`px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold border border-primary/20 transition-all duration-500 ${bioAnim.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+                    style={{ transitionDelay: bioAnim.isVisible ? `${600 + i * 100}ms` : "0ms" }}
+                  >
                     {tag}
                   </span>
                 ))}
