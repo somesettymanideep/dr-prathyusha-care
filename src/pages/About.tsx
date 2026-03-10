@@ -155,10 +155,11 @@ const About = () => {
             <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">Areas of Expertise</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {expertise.map((item) => (
+            {expertise.map((item, i) => (
               <div
                 key={item.title}
-                className="group bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:bg-primary hover:border-primary transition-all duration-300 text-center"
+                className={`group bg-card rounded-2xl p-6 border border-border/50 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:bg-primary hover:border-primary transition-all duration-300 text-center ${staggeredItem(expertAnim.isVisible, i)}`}
+                style={{ transitionDelay: expertAnim.isVisible ? `${i * 150}ms` : "0ms" }}
               >
                 <div className="w-14 h-14 rounded-full bg-primary/10 group-hover:bg-primary-foreground/20 flex items-center justify-center mx-auto mb-4 transition-colors duration-300">
                   <item.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
