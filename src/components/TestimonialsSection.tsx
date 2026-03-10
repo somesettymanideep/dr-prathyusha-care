@@ -144,10 +144,10 @@ const TestimonialsSection = () => {
             <span className="text-muted-foreground text-sm">Based on 120+ reviews</span>
           </div>
 
-          <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground">
+          <h2 className="text-3xl lg:text-5xl font-display font-bold text-secondary-foreground">
             What Our Clients Say on Google
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto font-body">
+          <p className="text-secondary-foreground/70 text-lg max-w-xl mx-auto font-body">
             Real reviews from our satisfied customers
           </p>
         </div>
