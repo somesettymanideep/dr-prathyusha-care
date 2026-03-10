@@ -111,7 +111,7 @@ const ConsultationForm = () => {
                 </SelectContent>
               </Select>
               <Button type="submit" variant="hero" className="rounded-full h-12 gap-2">
-                Appointment <ArrowRight className="w-4 h-4" />
+                Book Consultation <ArrowRight className="w-4 h-4" />
               </Button>
             </div>
           </form>
