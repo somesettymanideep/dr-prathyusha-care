@@ -39,7 +39,8 @@ const TreatmentsSection = () => {
           {treatments.map((t, i) => {
             const isActive = activeIndex === i;
             return (
-              <div
+              <Link
+                to={`/treatments/${t.slug}`}
                 key={t.title}
                 className={`relative rounded-2xl overflow-hidden min-h-[260px] border flex flex-col transition-all duration-500 cursor-pointer ${
                   isActive ? "shadow-xl -translate-y-2 border-primary/30" : "border-border/50 hover:shadow-xl hover:-translate-y-2 hover:border-primary/30"
