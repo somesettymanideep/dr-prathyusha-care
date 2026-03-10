@@ -42,8 +42,10 @@ const AnimatedCounter = ({ target, suffix }: { target: number; suffix: string })
 const StatsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   return (
-  <section className="bg-secondary py-16" ref={ref}>
-    <div className={`container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+  <section className="relative py-16 overflow-hidden" ref={ref}>
+    <img src={statsBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-secondary/85" />
+    <div className={`relative container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
         {stats.map((stat) => (
           <div key={stat.label} className="text-center space-y-3">
