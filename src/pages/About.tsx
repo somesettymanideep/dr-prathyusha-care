@@ -79,8 +79,8 @@ const About = () => {
       </section>
 
       {/* Main Bio Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20" ref={bioAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(bioAnim.isVisible)}`}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
