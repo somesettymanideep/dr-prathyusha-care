@@ -10,6 +10,7 @@ import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
 import TreatmentDetail from "./pages/TreatmentDetail";
 import ScrollToTop from "./components/ScrollToTop";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
