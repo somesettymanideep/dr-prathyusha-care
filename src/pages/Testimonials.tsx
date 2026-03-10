@@ -1,8 +1,10 @@
+import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
+  ChevronLeft,
   ChevronRight,
   Phone,
   Star,
@@ -104,6 +106,108 @@ const StarRating = ({ rating }: { rating: number }) => (
   </div>
 );
 
+const TestimonialsSlider = ({ textAnim }: { textAnim: { ref: React.RefObject<any>; isVisible: boolean } }) => {
+  const [current, setCurrent] = useState(0);
+  const totalSlides = textTestimonials.length;
+  const [slidesPerView, setSlidesPerView] = useState(3);
+
+  useEffect(() => {
+    const updateSlidesPerView = () => {
+      if (window.innerWidth < 768) setSlidesPerView(1);
+      else if (window.innerWidth < 1024) setSlidesPerView(2);
+      else setSlidesPerView(3);
+    };
+    updateSlidesPerView();
+    window.addEventListener("resize", updateSlidesPerView);
+    return () => window.removeEventListener("resize", updateSlidesPerView);
+  }, []);
+
+  const maxIndex = Math.max(0, totalSlides - slidesPerView);
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  }, [maxIndex]);
+
+  const prev = useCallback(() => {
+    setCurrent((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  }, [maxIndex]);
+
+  // Auto-play
+  useEffect(() => {
+    const interval = setInterval(next, 4000);
+    return () => clearInterval(interval);
+  }, [next]);
+
+  return (
+    <section className="py-24" ref={textAnim.ref}>
+      <div className={`container mx-auto px-4 transition-all duration-700 ${textAnim.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div className="text-center mb-16 space-y-3">
+          <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em]">Patient Reviews</p>
+          <h2 className="text-3xl lg:text-4xl font-display font-extrabold text-foreground">
+            Stories That Inspire Hope
+          </h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Every review represents a family's journey to joy. Here's what our patients have to say.
+          </p>
+          <div className="w-16 h-1 bg-primary mx-auto rounded-full mt-4" />
+        </div>
+
+        {/* Slider */}
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${current * (100 / slidesPerView)}%)` }}
+            >
+              {textTestimonials.map((t) => (
+                <div
+                  key={t.name}
+                  className="flex-shrink-0 px-3"
+                  style={{ width: `${100 / slidesPerView}%` }}
+                >
+                  <div className="group relative bg-card rounded-2xl p-7 border border-border/50 shadow-sm hover:shadow-xl transition-all duration-300 h-full">
+                    <Quote className="absolute top-5 right-5 h-8 w-8 text-primary/10 group-hover:text-primary/20 transition-colors" />
+                    <div className="flex items-center gap-4 mb-5">
+                      <img src={t.photo} alt={t.name} className="w-14 h-14 rounded-full object-cover border-2 border-primary/20" />
+                      <div>
+                        <p className="font-display font-bold text-foreground">{t.name}</p>
+                        <StarRating rating={t.rating} />
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">"{t.text}"</p>
+                    <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20">
+                      {t.treatment}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Nav buttons */}
+          <button onClick={prev} className="absolute -left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors z-10">
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button onClick={next} className="absolute -right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card border border-border shadow-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors z-10">
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </div>
+
+        {/* Dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`h-2.5 rounded-full transition-all duration-300 ${i === current ? "w-8 bg-primary" : "w-2.5 bg-border hover:bg-primary/40"}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Testimonials = () => {
   const heroAnim = useScrollAnimation();
   const textAnim = useScrollAnimation();
@@ -142,57 +246,8 @@ const Testimonials = () => {
         </div>
       </section>
 
-      {/* Text Testimonials Grid */}
-      <section className="py-24" ref={textAnim.ref}>
-        <div className={`container mx-auto px-4 ${animClass(textAnim.isVisible)}`}>
-          <div className="text-center mb-16 space-y-3">
-            <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em]">Patient Reviews</p>
-            <h2 className="text-3xl lg:text-4xl font-display font-extrabold text-foreground">
-              Stories That Inspire Hope
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Every review represents a family's journey to joy. Here's what our patients have to say.
-            </p>
-            <div className="w-16 h-1 bg-primary mx-auto rounded-full mt-4" />
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {textTestimonials.map((t, i) => (
-              <div
-                key={t.name}
-                className={`group relative bg-card rounded-2xl p-7 border border-border/50 shadow-sm hover:shadow-xl transition-all duration-500 ${textAnim.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-                style={{ transitionDelay: textAnim.isVisible ? `${i * 120}ms` : "0ms" }}
-              >
-                {/* Quote icon */}
-                <Quote className="absolute top-5 right-5 h-8 w-8 text-primary/10 group-hover:text-primary/20 transition-colors" />
-
-                {/* Patient info */}
-                <div className="flex items-center gap-4 mb-5">
-                  <img
-                    src={t.photo}
-                    alt={t.name}
-                    className="w-14 h-14 rounded-full object-cover border-2 border-primary/20"
-                  />
-                  <div>
-                    <p className="font-display font-bold text-foreground">{t.name}</p>
-                    <StarRating rating={t.rating} />
-                  </div>
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  "{t.text}"
-                </p>
-
-                {/* Treatment tag */}
-                <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold border border-primary/20">
-                  {t.treatment}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Text Testimonials Slider */}
+      <TestimonialsSlider textAnim={textAnim} />
 
       {/* Video Testimonials */}
       <section className="py-24 section-soft-bg" ref={videoAnim.ref}>
