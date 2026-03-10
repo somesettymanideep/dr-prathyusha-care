@@ -50,6 +50,16 @@ const milestones = [
 ];
 
 const About = () => {
+  const bioAnim = useScrollAnimation();
+  const eduAnim = useScrollAnimation();
+  const expertAnim = useScrollAnimation();
+  const memberAnim = useScrollAnimation();
+  const philoAnim = useScrollAnimation();
+  const ctaAnim = useScrollAnimation();
+
+  const animClass = (isVisible: boolean) =>
+    `transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`;
+
   return (
     <div className="min-h-screen bg-background font-body">
       <Navbar />
