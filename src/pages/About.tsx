@@ -86,7 +86,7 @@ const About = () => {
           {/* Top: Name + Title centered */}
           <div className="text-center mb-16 space-y-3">
             <p className="text-primary font-semibold text-sm uppercase tracking-[0.2em]">Meet Your Doctor</p>
-            <h2 className="text-4xl lg:text-5xl font-display font-extrabold text-foreground">
+            <h2 className="text-4xl lg:text-3xl font-display font-extrabold text-foreground">
               Dr. Prathyusha Javvadi
             </h2>
             <p className="text-lg text-muted-foreground">

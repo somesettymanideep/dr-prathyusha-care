@@ -37,8 +37,8 @@ const ConsultationProcess = () => {
         {/* Header */}
         <div className="text-center mb-16 space-y-3">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider">How It Works</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground leading-tight">
-            Our Consultation <span className="text-primary">Process</span>
+          <h2 className="text-3xl md:text-4xl lg:text-3xl font-display font-bold leading-tight">
+            <span className="text-secondary">Our Consultation</span> <span className="text-primary">Process</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto">
             A simple and guided path to start your fertility journey.

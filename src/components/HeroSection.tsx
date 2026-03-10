@@ -19,10 +19,10 @@ const HeroSection = () => (
             <span className="text-primary font-semibold text-xs uppercase tracking-widest">Now Accepting Appointments</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl xl:text-6xl font-display font-bold leading-[1.15] text-foreground">
-            Your Journey to{" "}
+          <h1 className="text-4xl md:text-5xl xl:text-6xl font-display font-bold leading-[1.15]">
+            <span className="text-secondary">Your Journey to</span>{" "}
             <span className="text-gradient">Parenthood</span>{" "}
-            Starts&nbsp;Here
+            <span className="text-secondary">Starts&nbsp;Here</span>
           </h1>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-xl font-body">

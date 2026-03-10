@@ -49,8 +49,8 @@ const ConsultationForm = () => {
               <Stethoscope className="w-5 h-5 text-primary" />
               <p className="text-primary font-semibold text-sm uppercase tracking-wider">Make Appointment</p>
             </div>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">
-              Make An <span className="text-primary">Appointment</span>
+            <h2 className="text-3xl md:text-4xl lg:text-3xl font-display font-bold">
+              <span className="text-secondary">Make An</span> <span className="text-primary">Appointment</span>
             </h2>
           </div>
 

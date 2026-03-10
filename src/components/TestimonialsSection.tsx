@@ -130,9 +130,8 @@ const TestimonialsSection = () => {
       />
       <div className="absolute inset-0 bg-secondary/85" />
       <div
-        className={`relative z-10 container mx-auto px-4 transition-all duration-700 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`relative z-10 container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
       >
         {/* Header */}
         <div className="text-center mb-14 space-y-4">
@@ -144,8 +143,8 @@ const TestimonialsSection = () => {
             <span className="text-muted-foreground text-sm">Based on 120+ reviews</span>
           </div>
 
-          <h2 className="text-3xl lg:text-5xl font-display font-bold text-secondary-foreground">
-            What Our Clients Say on Google
+          <h2 className="text-3xl md:text-4xl lg:text-3xl font-display font-bold">
+            <span className="text-secondary-foreground">What Our Clients Say</span> <span className="text-primary">on Google</span>
           </h2>
           <p className="text-secondary-foreground/70 text-lg max-w-xl mx-auto font-body">
             Real reviews from our satisfied customers
@@ -217,9 +216,8 @@ const TestimonialsSection = () => {
             <button
               key={i}
               onClick={() => setActiveIdx(i)}
-              className={`h-2.5 rounded-full transition-all duration-300 ${
-                i === activeIdx ? "w-8 bg-primary" : "w-2.5 bg-border hover:bg-primary/40"
-              }`}
+              className={`h-2.5 rounded-full transition-all duration-300 ${i === activeIdx ? "w-8 bg-primary" : "w-2.5 bg-border hover:bg-primary/40"
+                }`}
             />
           ))}
         </div>

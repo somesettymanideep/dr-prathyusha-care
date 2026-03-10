@@ -32,7 +32,9 @@ const TreatmentsSection = () => {
       <div className={`container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
         <div className="text-center mb-14 space-y-3">
           <p className="text-primary font-semibold text-sm uppercase tracking-wider">Our Services</p>
-          <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">Fertility Treatments</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-3xl font-display font-bold">
+            <span className="text-secondary">Fertility</span> <span className="text-primary">Treatments</span>
+          </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">Comprehensive fertility solutions tailored to your unique journey.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -42,9 +44,8 @@ const TreatmentsSection = () => {
               <Link
                 to={`/treatments/${t.slug}`}
                 key={t.title}
-                className={`relative rounded-2xl overflow-hidden min-h-[260px] border flex flex-col transition-all duration-500 cursor-pointer ${
-                  isActive ? "shadow-xl -translate-y-2 border-primary/30" : "border-border/50 hover:shadow-xl hover:-translate-y-2 hover:border-primary/30"
-                } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+                className={`relative rounded-2xl overflow-hidden min-h-[260px] border flex flex-col transition-all duration-500 cursor-pointer ${isActive ? "shadow-xl -translate-y-2 border-primary/30" : "border-border/50 hover:shadow-xl hover:-translate-y-2 hover:border-primary/30"
+                  } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}
                 onMouseEnter={() => setActiveIndex(i)}
               >
@@ -52,9 +53,8 @@ const TreatmentsSection = () => {
                 <img
                   src={t.img}
                   alt={t.title}
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-                    isActive ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"
+                    }`}
                 />
                 {/* Overlay */}
                 <div className={`absolute inset-0 bg-secondary/80 transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0"}`} />
@@ -64,29 +64,25 @@ const TreatmentsSection = () => {
                 {/* Content */}
                 <div className="relative z-10 p-6 flex flex-col h-full">
                   <t.icon
-                    className={`h-10 w-10 transition-colors duration-500 ${
-                      isActive ? "text-primary-foreground" : "text-primary"
-                    } mb-auto`}
+                    className={`h-10 w-10 transition-colors duration-500 ${isActive ? "text-primary-foreground" : "text-primary"
+                      } mb-auto`}
                     strokeWidth={1.5}
                   />
                   <div className="mt-6">
-                    <h3 className={`font-display font-bold text-lg mb-1 transition-colors duration-500 ${
-                      isActive ? "text-primary-foreground" : "text-foreground"
-                    }`}>
+                    <h3 className={`font-display font-bold text-lg mb-1 transition-colors duration-500 ${isActive ? "text-primary-foreground" : "text-foreground"
+                      }`}>
                       {t.title}
                     </h3>
-                    <p className={`text-sm leading-relaxed transition-colors duration-500 ${
-                      isActive ? "text-primary-foreground/80" : "text-muted-foreground"
-                    }`}>
+                    <p className={`text-sm leading-relaxed transition-colors duration-500 ${isActive ? "text-primary-foreground/80" : "text-muted-foreground"
+                      }`}>
                       {t.desc}
                     </p>
                   </div>
                 </div>
 
                 {/* Arrow button */}
-                <div className={`absolute bottom-5 right-5 z-10 w-10 h-10 rounded-full bg-primary flex items-center justify-center transition-all duration-500 ${
-                  isActive ? "opacity-100 scale-100" : "opacity-0 scale-75"
-                }`}>
+                <div className={`absolute bottom-5 right-5 z-10 w-10 h-10 rounded-full bg-primary flex items-center justify-center transition-all duration-500 ${isActive ? "opacity-100 scale-100" : "opacity-0 scale-75"
+                  }`}>
                   <ArrowUpRight className="h-5 w-5 text-primary-foreground" />
                 </div>
               </Link>

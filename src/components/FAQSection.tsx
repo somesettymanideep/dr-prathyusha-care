@@ -46,10 +46,10 @@ const FAQSection = () => {
               FAQs
             </span>
           </div>
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
-            Your IVF questions,
+          <h2 className="font-display text-3xl md:text-4xl lg:text-3xl font-bold mb-6 leading-tight">
+            <span className="text-secondary">Your IVF questions,</span>
             <br />
-            clearly <span className="text-primary">answered here</span>
+            <span className="text-secondary">clearly</span> <span className="text-primary">answered here</span>
           </h2>
           <p className="text-muted-foreground mb-10 max-w-md">
             Find clear, trusted answers to the most common questions about
