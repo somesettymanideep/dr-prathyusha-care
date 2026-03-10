@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Baby, HeartPulse, SmilePlus, CalendarHeart } from "lucide-react";
+import { Baby, HeartPulse, HeartHandshake, Trophy } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import statsBg from "@/assets/stats-bg.jpg";
 
