@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Testimonials from "./pages/Testimonials";
 import NotFound from "./pages/NotFound";
+import TreatmentDetail from "./pages/TreatmentDetail";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
