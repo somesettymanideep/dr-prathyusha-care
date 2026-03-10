@@ -47,10 +47,10 @@ const ConsultationForm = () => {
           <div className="mb-10 space-y-3">
             <div className="flex items-center gap-2">
               <Stethoscope className="w-5 h-5 text-primary" />
-              <p className="text-primary font-semibold text-sm uppercase tracking-wider">Make Appointment</p>
+              <p className="text-primary font-semibold text-sm uppercase tracking-wider">Book Consultation</p>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-3xl font-display font-bold">
-              <span className="text-secondary">Make An</span> <span className="text-primary">Appointment</span>
+              <span className="text-secondary">Book Your</span> <span className="text-primary">Consultation</span>
             </h2>
           </div>
 
