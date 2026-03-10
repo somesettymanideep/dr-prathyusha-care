@@ -29,17 +29,21 @@ const AboutSection = () => {
           </div>
         </div>
         <div className="space-y-6">
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider">About the Doctor</p>
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider">Meet Your Doctor</p>
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-foreground">
             Dr. Prathyusha Javvadi
           </h2>
           <p className="text-lg text-muted-foreground italic">
-            Consultant Head Fertility Specialist
+            MBBS, MS (OBG), FRM — Consultant Fertility Specialist
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            With over a decade of experience in reproductive medicine, Dr. Prathyusha Javvadi is dedicated to helping families realize their dream of parenthood. Her compassionate approach combined with cutting-edge fertility treatments has resulted in hundreds of successful outcomes.
+            I'm Dr. Prathyusha Javvadi, and I understand how deeply personal and emotional the journey to parenthood can be. With over 10 years of dedicated experience in reproductive medicine, I have helped more than 150 couples welcome their little ones into the world.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            My approach is simple — I listen first, then treat. Every patient's body and story is unique, and I believe in creating personalized treatment plans that give you the best chance of success, with care and compassion at every step.
           </p>
           <div className="space-y-3">
+            <p className="text-sm font-semibold text-foreground">Qualifications & Affiliations:</p>
             {qualifications.map((q) => (
               <div key={q} className="flex items-start gap-3">
                 <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
@@ -48,7 +52,7 @@ const AboutSection = () => {
             ))}
           </div>
           <Button variant="hero" asChild>
-            <a href="#treatments">View Treatments</a>
+            <a href="#consultation">Book a Consultation</a>
           </Button>
         </div>
       </div>
