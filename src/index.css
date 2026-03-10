@@ -37,7 +37,7 @@
     --radius: 0.75rem;
 
     --hero-gradient: linear-gradient(135deg, hsl(340 85% 53% / 0.08), hsl(289 30% 35% / 0.06));
-    --section-soft: 289 20% 97%;
+    --section-soft: 320 50% 97%;
 
     font-family: 'Raleway', sans-serif;
   }
