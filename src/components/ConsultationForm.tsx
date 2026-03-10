@@ -25,7 +25,7 @@ const ConsultationForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Your appointment request has been submitted! We'll contact you shortly.");
+    toast.success("Your consultation request has been submitted! We'll contact you shortly.");
     setForm({ name: "", phone: "", email: "", treatment: "", date: "" });
   };
 
