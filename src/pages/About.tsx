@@ -169,8 +169,8 @@ const About = () => {
       </section>
 
       {/* Professional Memberships */}
-      <section className="py-20 section-soft-bg">
-        <div className="container mx-auto px-4">
+      <section className="py-20 section-soft-bg" ref={memberAnim.ref}>
+        <div className={`container mx-auto px-4 ${animClass(memberAnim.isVisible)}`}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Professional Affiliations</p>
