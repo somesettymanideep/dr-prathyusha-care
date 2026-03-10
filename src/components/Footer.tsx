@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import footerBg from "@/assets/footer-bg.jpg";
 
 const Footer = () => (
-  <footer className="bg-secondary text-secondary-foreground">
-    <div className="container mx-auto px-6 md:px-10 lg:px-16 py-16">
+  <footer className="relative text-secondary-foreground">
+    <div
+      className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${footerBg})` }}
+    />
+    <div className="absolute inset-0 bg-secondary/90" />
+    <div className="relative z-10 container mx-auto px-6 md:px-10 lg:px-16 py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="space-y-4">
           <h3 className="text-2xl font-display font-bold">Dr. Prathyusha Javvadi</h3>
@@ -63,7 +69,7 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="border-t border-primary-foreground/10">
+    <div className="relative z-10 border-t border-primary-foreground/10">
       <div className="container mx-auto px-4 py-5 text-center text-sm opacity-60">
         © {new Date().getFullYear()} Dr. Prathyusha Javvadi. All rights reserved.
       </div>
