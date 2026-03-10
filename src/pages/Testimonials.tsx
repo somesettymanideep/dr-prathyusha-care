@@ -283,9 +283,8 @@ const Testimonials = () => {
                 </div>
 
                 {/* Info */}
-                <div className="p-5 bg-card">
-                  <p className="font-display font-bold text-foreground mb-1">{v.name}</p>
-                  <p className="text-muted-foreground text-sm">{v.description}</p>
+                <div className="p-4 bg-card text-center">
+                  <p className="font-display font-bold text-foreground">{v.name}</p>
                 </div>
               </div>
             ))}
