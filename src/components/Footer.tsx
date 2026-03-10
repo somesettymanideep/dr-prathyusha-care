@@ -9,7 +9,7 @@ const Footer = () => (
       style={{ backgroundImage: `url(${footerBg})` }}
     />
     <div className="absolute inset-0 bg-secondary/90" />
-    <div className="container mx-auto px-6 md:px-10 lg:px-16 py-16">
+    <div className="relative z-10 container mx-auto px-6 md:px-10 lg:px-16 py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="space-y-4">
           <h3 className="text-2xl font-display font-bold">Dr. Prathyusha Javvadi</h3>
