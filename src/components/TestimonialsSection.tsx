@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
+import footerBg from "@/assets/footer-bg.jpg";
 
 import customer1 from "@/assets/testimonials/customer-1.png";
 import customer2 from "@/assets/testimonials/customer-2.png";
@@ -122,9 +123,14 @@ const TestimonialsSection = () => {
   const visible = testimonials.slice(activeIdx, activeIdx + cardsPerView);
 
   return (
-    <section id="testimonials" className="py-20 lg:py-28 bg-muted/30" ref={ref}>
+    <section id="testimonials" className="relative py-20 lg:py-28" ref={ref}>
       <div
-        className={`container mx-auto px-4 transition-all duration-700 ${
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${footerBg})` }}
+      />
+      <div className="absolute inset-0 bg-secondary/85" />
+      <div
+        className={`relative z-10 container mx-auto px-4 transition-all duration-700 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -138,10 +144,10 @@ const TestimonialsSection = () => {
             <span className="text-muted-foreground text-sm">Based on 120+ reviews</span>
           </div>
 
-          <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground">
+          <h2 className="text-3xl lg:text-5xl font-display font-bold text-secondary-foreground">
             What Our Clients Say on Google
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto font-body">
+          <p className="text-secondary-foreground/70 text-lg max-w-xl mx-auto font-body">
             Real reviews from our satisfied customers
           </p>
         </div>
