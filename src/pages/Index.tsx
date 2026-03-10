@@ -4,6 +4,7 @@ import StatsSection from "@/components/StatsSection";
 import AboutSection from "@/components/AboutSection";
 import TreatmentsSection from "@/components/TreatmentsSection";
 import ConsultationForm from "@/components/ConsultationForm";
+import ConsultationProcess from "@/components/ConsultationProcess";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
