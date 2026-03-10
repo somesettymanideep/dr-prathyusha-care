@@ -69,9 +69,10 @@ const Footer = () => (
         </div>
       </div>
     </div>
-    <div className="relative z-10 border-t border-primary-foreground/10">
-      <div className="container mx-auto px-4 py-5 text-center text-sm opacity-60">
-        © {new Date().getFullYear()} Dr. Prathyusha Javvadi. All rights reserved.
+    <div className="relative z-10 bg-primary">
+      <div className="container mx-auto px-4 py-4 text-center text-sm text-primary-foreground">
+        <p>© {new Date().getFullYear()} Dr. Prathyusha Javvadi. All rights reserved.</p>
+        <p className="mt-1 opacity-80">Designed and Developed by Ayron Digital Solutions</p>
       </div>
     </div>
   </footer>
