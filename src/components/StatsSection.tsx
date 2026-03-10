@@ -42,23 +42,23 @@ const AnimatedCounter = ({ target, suffix }: { target: number; suffix: string })
 const StatsSection = () => {
   const { ref, isVisible } = useScrollAnimation();
   return (
-  <section className="relative py-16 overflow-hidden" ref={ref}>
-    <img src={statsBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-secondary/80" />
-    <div className={`relative container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        {stats.map((stat) => (
-          <div key={stat.label} className="text-center space-y-3">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary border-2 border-secondary/80 mb-2">
-              <stat.icon className="h-8 w-8 text-primary-foreground" strokeWidth={2.5} />
+    <section className="relative py-16 overflow-hidden" ref={ref}>
+      <img src={statsBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-secondary/80" />
+      <div className={`relative container mx-auto px-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center space-y-3">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary border-2 border-primary/80 mb-2">
+                <stat.icon className="h-8 w-8 text-primary-foreground" strokeWidth={2.5} />
+              </div>
+              <AnimatedCounter target={parseInt(stat.value)} suffix={stat.suffix} />
+              <p className="text-primary-foreground font-semibold text-sm tracking-wide uppercase">{stat.label}</p>
             </div>
-            <AnimatedCounter target={parseInt(stat.value)} suffix={stat.suffix} />
-            <p className="text-primary-foreground font-semibold text-sm tracking-wide uppercase">{stat.label}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 
