@@ -13,14 +13,14 @@ import ovulationImg from "@/assets/treatments/ovulation.jpg";
 import pgtImg from "@/assets/treatments/pgt.jpg";
 
 const treatments = [
-  { icon: Microscope, title: "In Vitro Fertilization (IVF)", desc: "Lab fertilization of eggs for a higher success rate.", img: ivfImg },
-  { icon: Snowflake, title: "Egg Freezing", desc: "Preserve your eggs for a future pregnancy.", img: eggFreezingImg },
-  { icon: FlaskConical, title: "Embryo Freezing", desc: "High-quality embryos from IVF are frozen for future use.", img: embryoFreezingImg },
-  { icon: HeartPulse, title: "Fertility Preservation", desc: "Egg, sperm, or embryo freezing options for patients.", img: fertilityPreservationImg },
-  { icon: Box, title: "Surrogacy Support", desc: "Helping individuals & couples find a trusted surrogate.", img: surrogacyImg },
-  { icon: Syringe, title: "Male Fertility Care", desc: "Comprehensive diagnostic and treatment options.", img: maleFertilityImg, featured: true },
-  { icon: ScanSearch, title: "Ovulation Induction", desc: "Expert diagnosis and care for couples facing miscarriages.", img: ovulationImg },
-  { icon: Dna, title: "PGT (Genetic Testing)", desc: "Screen embryos for your genetic conditions.", img: pgtImg },
+  { icon: Microscope, title: "In Vitro Fertilization (IVF)", desc: "Lab fertilization of eggs for a higher success rate.", img: ivfImg, slug: "ivf" },
+  { icon: Snowflake, title: "Egg Freezing", desc: "Preserve your eggs for a future pregnancy.", img: eggFreezingImg, slug: "egg-freezing" },
+  { icon: FlaskConical, title: "Embryo Freezing", desc: "High-quality embryos from IVF are frozen for future use.", img: embryoFreezingImg, slug: "embryo-freezing" },
+  { icon: HeartPulse, title: "Fertility Preservation", desc: "Egg, sperm, or embryo freezing options for patients.", img: fertilityPreservationImg, slug: "fertility-preservation" },
+  { icon: Box, title: "Surrogacy Support", desc: "Helping individuals & couples find a trusted surrogate.", img: surrogacyImg, slug: "surrogacy" },
+  { icon: Syringe, title: "Male Fertility Care", desc: "Comprehensive diagnostic and treatment options.", img: maleFertilityImg, slug: "male-fertility", featured: true },
+  { icon: ScanSearch, title: "Ovulation Induction", desc: "Expert diagnosis and care for couples facing miscarriages.", img: ovulationImg, slug: "ovulation-induction" },
+  { icon: Dna, title: "PGT (Genetic Testing)", desc: "Screen embryos for your genetic conditions.", img: pgtImg, slug: "pgt" },
 ];
 
 const TreatmentsSection = () => {
