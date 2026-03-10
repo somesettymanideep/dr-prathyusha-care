@@ -208,7 +208,7 @@ const TestimonialsSlider = ({ textAnim }: { textAnim: { ref: React.RefObject<any
   );
 };
 
-
+const Testimonials = () => {
   const heroAnim = useScrollAnimation();
   const textAnim = useScrollAnimation();
   const videoAnim = useScrollAnimation();
