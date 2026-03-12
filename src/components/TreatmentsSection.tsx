@@ -48,6 +48,7 @@ const TreatmentsSection = () => {
                   } ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}
                 onMouseEnter={() => setActiveIndex(i)}
+                onTouchStart={() => setActiveIndex(i)}
               >
                 {/* Background image */}
                 <img
