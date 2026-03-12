@@ -220,7 +220,7 @@ const Testimonials = () => {
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative h-[400px] flex items-center overflow-hidden">
+      <section className="relative h-[200px] md:h-[400px] flex items-center overflow-hidden">
         <img src={testimonialsBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-secondary/70" />
         <div className="relative container mx-auto px-4 text-center" ref={heroAnim.ref}>
