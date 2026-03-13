@@ -76,7 +76,7 @@ const TreatmentDetail = () => {
                   Book Appointment
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
+              <Button size="lg" className="border-2 border-white/50 bg-transparent text-white hover:bg-white/10 hover:text-white rounded-md" asChild>
                 <a href="tel:+919934510101" className="gap-2">
                   <Phone className="h-5 w-5" />
                   Call Now
