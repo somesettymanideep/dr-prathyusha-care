@@ -50,7 +50,7 @@ const TreatmentDetail = () => {
       <Navbar />
 
       {/* 1. Hero Banner */}
-      <section className="relative min-h-[200px] md:min-h-[480px] flex items-center overflow-hidden">
+      <section className="relative min-h-[200px] md:min-h-[300px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={treatmentHeroBanner} alt="Medical clinic" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/50" />
