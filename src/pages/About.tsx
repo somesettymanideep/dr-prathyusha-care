@@ -14,7 +14,7 @@ import {
   Star,
   Target,
 } from "lucide-react";
-import headerBg from "@/assets/page-header-bg.jpg";
+import headerBg from "@/assets/about-banner.jpg";
 import doctorAbout from "@/assets/doctor-about.jpg";
 import doctorHero from "@/assets/doctor-hero.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
