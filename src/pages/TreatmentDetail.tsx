@@ -218,32 +218,7 @@ const TreatmentDetail = () => {
         </div>
       </section>
 
-      {/* 6. Statistics Section */}
-      <section className="py-16 md:py-20 relative overflow-hidden" ref={statsAnim.ref}>
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary" />
-        <div className={`relative z-10 container mx-auto px-4 transition-all duration-700 ${statsAnim.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <div className="text-center mb-12">
-            <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-3">Our Track Record</p>
-            <h2 className="text-3xl lg:text-4xl font-display font-bold text-primary-foreground">
-              Success in Numbers
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {treatment.stats.map((stat, i) => (
-              <div
-                key={i}
-                className="text-center bg-primary-foreground/5 backdrop-blur-sm rounded-2xl p-6 border border-primary-foreground/10"
-                style={{ transitionDelay: `${i * 100}ms` }}
-              >
-                <p className="text-3xl md:text-4xl font-display font-bold text-primary mb-2">{stat.value}</p>
-                <p className="text-primary-foreground/70 text-sm font-medium">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. FAQ Section */}
+      {/* FAQ Section */}
       <section className="py-16 md:py-20" ref={faqAnim.ref}>
         <div className={`container mx-auto px-4 transition-all duration-700 ${faqAnim.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <div className="text-center mb-12">
