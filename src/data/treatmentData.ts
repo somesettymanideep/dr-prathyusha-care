@@ -7,6 +7,7 @@ import surrogacyImg from "@/assets/treatments/surrogacy.jpg";
 import maleFertilityImg from "@/assets/treatments/male-fertility.jpg";
 import ovulationImg from "@/assets/treatments/ovulation.jpg";
 import pgtImg from "@/assets/treatments/pgt.jpg";
+import iuiImg from "@/assets/treatments/iui.jpg";
 
 export interface TreatmentData {
   slug: string;
