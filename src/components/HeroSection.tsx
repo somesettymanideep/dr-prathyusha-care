@@ -34,7 +34,7 @@ const HeroSection = () => (
               <Link to="/contact">Book Consultation</Link>
             </Button>
             <Button variant="heroOutline" size="lg" asChild>
-              <a href="tel:+919934510101">
+              <a href="tel:+919010440101">
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
               </a>

@@ -89,7 +89,7 @@ const Contact = () => {
               <p className="text-sm text-secondary-foreground/80 mb-4">
                 Reach out for personalized IVF support.
               </p>
-              <a href="tel:+919934510101" className="block font-semibold text-lg mb-1 hover:underline">+91 99345 10101</a>
+              <a href="tel:+919010440101" className="block font-semibold text-lg mb-1 hover:underline">+91 90104 40101</a>
               <a href="mailto:Admin@ferticareivfcentre.com" className="text-sm font-semibold hover:underline">Admin@ferticareivfcentre.com</a>
             </div>
           </div>
@@ -139,9 +139,9 @@ const Contact = () => {
           <h2 className="text-3xl lg:text-4xl font-display font-bold text-primary-foreground">Ready to Start Your Journey?</h2>
           <p className="text-primary-foreground/80 max-w-lg mx-auto">Book your consultation today and take the first step towards parenthood with Dr. Prathyusha Javvadi.</p>
           <Button variant="heroOutline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-            <a href="tel:+919934510101">
+            <a href="tel:+919010440101">
               <Phone className="h-4 w-4 mr-2" />
-              Call Now: +91 99345 10101
+              Call Now: +91 90104 40101
             </a>
           </Button>
         </div>

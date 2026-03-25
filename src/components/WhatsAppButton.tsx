@@ -5,7 +5,7 @@ const WhatsAppButton = () => {
         Chat with us
       </span>
       <a
-        href="https://wa.me/918886002422?text=Hi%20Dr.%20Prathyusha%2C%20I%20would%20like%20to%20book%20a%20consultation."
+        href="https://wa.me/919010440101?text=Hi%20Dr.%20Prathyusha%2C%20I%20would%20like%20to%20book%20a%20consultation."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
