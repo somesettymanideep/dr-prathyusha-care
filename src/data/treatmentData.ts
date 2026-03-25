@@ -1,4 +1,4 @@
-import { Microscope, Snowflake, FlaskConical, HeartPulse, Box, Syringe, ScanSearch, Dna } from "lucide-react";
+import { Microscope, Snowflake, FlaskConical, HeartPulse, Box, Syringe, ScanSearch, Dna, Target } from "lucide-react";
 import ivfImg from "@/assets/treatments/ivf.jpg";
 import eggFreezingImg from "@/assets/treatments/egg-freezing.jpg";
 import embryoFreezingImg from "@/assets/treatments/embryo-freezing.jpg";
