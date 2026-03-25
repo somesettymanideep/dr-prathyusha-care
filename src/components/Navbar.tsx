@@ -46,8 +46,8 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-md border-b">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <Link to="/" className="flex items-center gap-0.5 group">
-          <span className="text-2xl font-display font-extrabold tracking-tight text-gradient">Dr. Prathyusha</span>
-          <span className="text-2xl font-display font-light tracking-wide text-secondary ml-1.5">Javvadi</span>
+          <span className="text-3xl font-extrabold tracking-tight text-gradient" style={{ fontFamily: "'Playfair Display', serif" }}>Dr. Prathyusha</span>
+          <span className="text-3xl font-light tracking-wide text-secondary ml-1.5" style={{ fontFamily: "'Playfair Display', serif" }}>Javvadi</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
