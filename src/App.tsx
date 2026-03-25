@@ -23,6 +23,7 @@ const App = () => (
       <HashRouter>
         <ScrollToTop />
         <WhatsAppButton />
+        <SocialSidebar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
