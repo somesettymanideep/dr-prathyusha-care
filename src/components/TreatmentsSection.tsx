@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Baby, Microscope, Snowflake, HeartPulse, Dna, Syringe, FlaskConical, ScanSearch, Box, ArrowUpRight } from "lucide-react";
+import { Baby, Microscope, Snowflake, HeartPulse, Dna, Syringe, FlaskConical, ScanSearch, Box, ArrowUpRight, Target } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 import ivfImg from "@/assets/treatments/ivf.jpg";
