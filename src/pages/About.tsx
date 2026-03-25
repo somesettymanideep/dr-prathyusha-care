@@ -275,9 +275,9 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="heroOutline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <a href="tel:+919934510101">
+              <a href="tel:+919010440101">
                 <Phone className="h-4 w-4 mr-2" />
-                Call Now: +91 99345 10101
+                Call Now: +91 90104 40101
               </a>
             </Button>
             <Button variant="heroOutline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>

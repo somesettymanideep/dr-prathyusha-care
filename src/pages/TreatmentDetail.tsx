@@ -77,7 +77,7 @@ const TreatmentDetail = () => {
                 </Link>
               </Button>
               <Button size="lg" className="border-2 border-white/50 bg-transparent text-white hover:bg-white/10 hover:text-white rounded-md" asChild>
-                <a href="tel:+919934510101" className="gap-2">
+                <a href="tel:+919010440101" className="gap-2">
                   <Phone className="h-5 w-5" />
                   Call Now
                 </a>

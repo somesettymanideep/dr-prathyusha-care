@@ -53,9 +53,9 @@ const Footer = () => (
         <div className="space-y-4">
           <h4 className="font-display font-semibold text-lg">Contact</h4>
           <div className="space-y-3 text-sm">
-            <a href="tel:+919934510101" className="flex items-start gap-3 opacity-80 hover:opacity-100 transition-opacity">
+            <a href="tel:+919010440101" className="flex items-start gap-3 opacity-80 hover:opacity-100 transition-opacity">
               <Phone className="h-4 w-4 mt-0.5 shrink-0" />
-              +91 99345 10101
+              +91 90104 40101
             </a>
             <a href="mailto:Admin@ferticareivfcentre.com" className="flex items-start gap-3 opacity-80 hover:opacity-100 transition-opacity">
               <Mail className="h-4 w-4 mt-0.5 shrink-0" />

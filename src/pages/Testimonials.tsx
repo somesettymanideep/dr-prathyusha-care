@@ -339,7 +339,7 @@ const Testimonials = () => {
               className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               asChild
             >
-              <a href="tel:+919934510101">
+              <a href="tel:+919010440101">
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
               </a>

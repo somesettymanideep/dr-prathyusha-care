@@ -97,9 +97,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <a href="tel:+919934510101" className="flex items-center gap-2 text-sm text-primary font-semibold">
+          <a href="tel:+919010440101" className="flex items-center gap-2 text-sm text-primary font-semibold">
             <Phone className="h-4 w-4" />
-            +91 99345 10101
+            +91 90104 40101
           </a>
           <Button variant="hero" size="sm" asChild>
             <Link to="/contact">Book Consultation</Link>
