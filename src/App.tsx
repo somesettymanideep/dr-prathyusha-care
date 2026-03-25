@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import TreatmentDetail from "./pages/TreatmentDetail";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppButton from "./components/WhatsAppButton";
+import SocialSidebar from "./components/SocialSidebar";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
       <HashRouter>
         <ScrollToTop />
         <WhatsAppButton />
+        <SocialSidebar />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
