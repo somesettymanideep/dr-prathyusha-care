@@ -1,4 +1,4 @@
-import { Microscope, Snowflake, FlaskConical, HeartPulse, Box, Syringe, ScanSearch, Dna } from "lucide-react";
+import { Microscope, Snowflake, FlaskConical, HeartPulse, Box, Syringe, ScanSearch, Dna, Target } from "lucide-react";
 import ivfImg from "@/assets/treatments/ivf.jpg";
 import eggFreezingImg from "@/assets/treatments/egg-freezing.jpg";
 import embryoFreezingImg from "@/assets/treatments/embryo-freezing.jpg";
@@ -7,6 +7,7 @@ import surrogacyImg from "@/assets/treatments/surrogacy.jpg";
 import maleFertilityImg from "@/assets/treatments/male-fertility.jpg";
 import ovulationImg from "@/assets/treatments/ovulation.jpg";
 import pgtImg from "@/assets/treatments/pgt.jpg";
+import iuiImg from "@/assets/treatments/iui.jpg";
 
 export interface TreatmentData {
   slug: string;
@@ -318,6 +319,50 @@ export const treatments: TreatmentData[] = [
       { question: "Are there side effects?", answer: "Common side effects include mild bloating, mood changes, and headaches. Your doctor will monitor for ovarian hyperstimulation." },
       { question: "How many cycles are recommended?", answer: "Typically 3-6 cycles are attempted before considering more advanced treatments like IVF." },
       { question: "Can I combine this with IUI?", answer: "Yes, ovulation induction is often combined with IUI to improve the chances of conception." }
+    ]
+  },
+  {
+    slug: "iui",
+    icon: Target,
+    title: "IUI (Intra Uterine Insemination)",
+    subtitle: "A minimally invasive fertility treatment that places prepared sperm directly into the uterus to improve conception chances.",
+    image: iuiImg,
+    overview: "Intrauterine Insemination (IUI) is a fertility treatment where specially prepared sperm is placed directly into the uterus around the time of ovulation. By bypassing the cervix and placing sperm closer to the fallopian tubes, IUI increases the number of sperm that reach the egg, improving the chances of fertilization and pregnancy.",
+    howItWorks: "The process begins with monitoring the woman's natural cycle or using ovulation-stimulating medications. A semen sample is collected and processed in the lab to concentrate the healthiest, most motile sperm. Using a thin catheter, the prepared sperm is gently inserted directly into the uterus during the optimal fertility window.",
+    whoNeeds: [
+      "Couples with unexplained infertility",
+      "Women with cervical mucus problems",
+      "Men with mild sperm count or motility issues",
+      "Couples using donor sperm",
+      "Women with ovulation disorders (combined with ovulation induction)",
+      "Couples who want a less invasive treatment before considering IVF"
+    ],
+    process: [
+      { step: "Consultation & Testing", description: "Evaluate fertility history, confirm open fallopian tubes, and assess sperm quality." },
+      { step: "Ovulation Monitoring", description: "Track follicle development with ultrasounds and blood tests." },
+      { step: "Ovulation Trigger", description: "If needed, a trigger injection ensures precise timing of ovulation." },
+      { step: "Sperm Preparation", description: "Semen sample is washed and concentrated to select the best sperm." },
+      { step: "Insemination", description: "Prepared sperm is gently placed into the uterus using a thin catheter." },
+      { step: "Pregnancy Test", description: "A blood test is done approximately two weeks after the procedure." }
+    ],
+    benefits: [
+      { title: "Minimally Invasive", description: "A simple, quick procedure with minimal discomfort and no anesthesia needed." },
+      { title: "Cost Effective", description: "Significantly more affordable than IVF while still improving conception odds." },
+      { title: "Natural Approach", description: "Works with the body's natural reproductive process for conception." },
+      { title: "Quick Recovery", description: "No downtime required — resume normal activities immediately after the procedure." }
+    ],
+    stats: [
+      { value: "15-20%", label: "Per Cycle Success" },
+      { value: "3000+", label: "Procedures Done" },
+      { value: "3-6", label: "Cycles Recommended" },
+      { value: "10+", label: "Years Experience" }
+    ],
+    faqs: [
+      { question: "How long does the IUI procedure take?", answer: "The insemination itself takes only 5-10 minutes. The entire visit, including preparation, usually takes about 30 minutes." },
+      { question: "Is IUI painful?", answer: "Most women experience little to no discomfort. Some may feel mild cramping similar to a menstrual cramp during the procedure." },
+      { question: "How many IUI cycles should I try before moving to IVF?", answer: "Typically, 3-6 cycles of IUI are recommended. If pregnancy is not achieved, your doctor may suggest moving to IVF for higher success rates." },
+      { question: "Can IUI be done with donor sperm?", answer: "Yes, IUI is commonly used with donor sperm and is one of the most effective methods for donor insemination." },
+      { question: "What is the difference between IUI and IVF?", answer: "IUI places sperm in the uterus to facilitate natural fertilization, while IVF involves fertilizing eggs outside the body in a lab. IUI is less invasive and more affordable but has lower per-cycle success rates." }
     ]
   },
   {
