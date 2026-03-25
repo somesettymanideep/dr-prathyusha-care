@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Baby, Microscope, Snowflake, HeartPulse, Dna, Syringe, FlaskConical, ScanSearch, Box, ArrowUpRight } from "lucide-react";
+import { Baby, Microscope, Snowflake, HeartPulse, Dna, Syringe, FlaskConical, ScanSearch, Box, ArrowUpRight, Target } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 import ivfImg from "@/assets/treatments/ivf.jpg";
+import iuiImg from "@/assets/treatments/iui.jpg";
 import eggFreezingImg from "@/assets/treatments/egg-freezing.jpg";
 import embryoFreezingImg from "@/assets/treatments/embryo-freezing.jpg";
 import fertilityPreservationImg from "@/assets/treatments/fertility-preservation.jpg";
@@ -14,6 +15,7 @@ import pgtImg from "@/assets/treatments/pgt.jpg";
 
 const treatments = [
   { icon: Microscope, title: "In Vitro Fertilization (IVF)", desc: "Lab fertilization of eggs for a higher success rate.", img: ivfImg, slug: "ivf" },
+  { icon: Target, title: "IUI Treatment", desc: "A simple, effective procedure placing sperm directly into the uterus.", img: iuiImg, slug: "iui" },
   { icon: Snowflake, title: "Egg Freezing", desc: "Preserve your eggs for a future pregnancy.", img: eggFreezingImg, slug: "egg-freezing" },
   { icon: FlaskConical, title: "Embryo Freezing", desc: "High-quality embryos from IVF are frozen for future use.", img: embryoFreezingImg, slug: "embryo-freezing" },
   { icon: HeartPulse, title: "Fertility Preservation", desc: "Egg, sperm, or embryo freezing options for patients.", img: fertilityPreservationImg, slug: "fertility-preservation" },
