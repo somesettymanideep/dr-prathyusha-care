@@ -29,8 +29,28 @@ const socialLinks = [
       </svg>
     ),
   },
+  {
+    label: "Justdial",
+    href: "https://www.justdial.com/Hyderabad/Dr-Prathyusha-Javvadi",
+    bg: "#0C4DA2",
+    icon: (
+      <svg className="w-5 h-5 text-white shrink-0" viewBox="0 0 24 24" fill="currentColor">
+        <text x="3" y="18" fontFamily="Arial,sans-serif" fontWeight="bold" fontSize="16">Jd</text>
+      </svg>
+    ),
+  },
+  {
+    label: "MediBuddy",
+    href: "https://www.medibuddy.in",
+    bg: "#FF6B35",
+    icon: (
+      <svg className="w-5 h-5 text-white shrink-0" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14h-2v-6h2v6zm4 0h-2v-6h2v6zm-3-8c-.55 0-1-.45-1-1V5h2v2c0 .55-.45 1-1 1z" />
+        <path d="M9 7c-.55 0-1-.45-1-1V4h2v2c0 .55-.45 1-1 1zm6 0c-.55 0-1-.45-1-1V4h2v2c0 .55-.45 1-1 1z" />
+      </svg>
+    ),
+  },
 ];
-
 const SocialSidebar = () => {
   return (
     <div className="fixed left-0 top-1/2 -translate-y-1/2 z-50 flex flex-col shadow-lg rounded-r-lg overflow-hidden">
