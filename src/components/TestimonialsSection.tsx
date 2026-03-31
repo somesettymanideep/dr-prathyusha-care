@@ -13,57 +13,57 @@ import customer6 from "@/assets/testimonials/customer-6.png";
 
 const testimonials = [
   {
-    name: "Priya & Rakesh",
+    name: "Siva Kasani",
     image: customer1,
-    location: "Guntur",
-    date: "2 months ago",
+    location: "Google Review",
+    date: "Recently",
     feedback:
-      "Dr. Prathyusha changed our lives. After years of trying, we finally have our little miracle. Her patience and expertise gave us hope when we had almost given up.",
+      "Having a great journey with Dr. Prathyusha garu and their staff.",
     rating: 5,
   },
   {
-    name: "Sunitha & Vamsi",
+    name: "Dayyam Arjun",
     image: customer2,
-    location: "Vijayawada",
-    date: "3 months ago",
+    location: "Google Review",
+    date: "Recently",
     feedback:
-      "Dr. Prathyusha and her team made us feel comfortable and supported throughout our IVF journey. We are blessed with twins now!",
+      "My heartfelt thanks to Dr. Pratyusha garu. I am beyond grateful to the entire team. Thanks to this entire team. Very happy with the treatment. And the care and concern from the whole team.",
     rating: 5,
   },
   {
-    name: "Kavitha & Ravi",
+    name: "Amruthavalli Rittapalli",
     image: customer3,
-    location: "Hyderabad",
-    date: "1 month ago",
+    location: "Google Review",
+    date: "Recently",
     feedback:
-      "Exceptional care and professionalism. Dr. Prathyusha explained every step clearly and her success rates speak for themselves.",
+      "Dr. Prathyusha mam and hospital staff are very humble.",
     rating: 5,
   },
   {
-    name: "Deepa & Suresh",
+    name: "Ganta Prathyusha",
     image: customer4,
-    location: "Hyderabad",
-    date: "4 months ago",
+    location: "Google Review",
+    date: "Recently",
     feedback:
-      "We traveled from Hyderabad specifically for Dr. Prathyusha's expertise. Best decision we ever made. Our daughter is our world now.",
+      "Having a great journey. And Dr. Prathyusha garu and all staff have maintained responsibility towards our treatment.",
     rating: 5,
   },
   {
-    name: "Meena & Anil",
+    name: "Jyothi Manepalli",
     image: customer5,
-    location: "Tenali",
-    date: "2 weeks ago",
+    location: "Google Review",
+    date: "Recently",
     feedback:
-      "From our first consultation, Dr. Prathyusha made us feel at ease. Her knowledge and compassion are unmatched. Forever grateful.",
+      "After a lot of struggles finally reached right destination. Thank you so much Prathyusha madam garu and staff members.",
     rating: 5,
   },
   {
-    name: "Lakshmi & Prasad",
+    name: "Radha Krishna",
     image: customer6,
-    location: "Guntur",
-    date: "1 week ago",
+    location: "Google Review",
+    date: "Recently",
     feedback:
-      "Amazing experience from start to finish. The entire team was so supportive and caring. We now have a beautiful baby boy!",
+      "Good treatment and service. Thank you Dr. Prathyusha mam and team.",
     rating: 5,
   },
 ];
