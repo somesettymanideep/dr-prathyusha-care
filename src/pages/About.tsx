@@ -44,9 +44,9 @@ const expertise = [
 
 const milestones = [
   { number: "10+", label: "Years of Experience" },
-  { number: "150+", label: "Happy Families" },
+  { number: "1000+", label: "Happy Families" },
   { number: "65%", label: "IVF Success Rate" },
-  { number: "45%", label: "IUI Success Rate" },
+  { number: "30%", label: "IUI Success Rate" },
 ];
 
 const About = () => {
