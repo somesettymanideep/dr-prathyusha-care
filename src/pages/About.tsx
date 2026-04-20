@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import headerBg from "@/assets/about-banner.jpg";
 import doctorAbout from "@/assets/dr-prathyusha-meet.png";
-import doctorHero from "@/assets/doctor-hero.jpg";
+import doctorMemberships from "@/assets/dr-prathyusha-memberships.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const education = [
