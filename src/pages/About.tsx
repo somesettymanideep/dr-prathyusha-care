@@ -15,7 +15,7 @@ import {
   Target,
 } from "lucide-react";
 import headerBg from "@/assets/about-banner.jpg";
-import doctorAbout from "@/assets/doctor-about.jpg";
+import doctorAbout from "@/assets/dr-prathyusha-meet.png";
 import doctorHero from "@/assets/doctor-hero.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
