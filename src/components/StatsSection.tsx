@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import statsBg from "@/assets/stats-bg.jpg";
 
 const stats = [
-  { icon: HeartPulse, label: "IUI Success Rate", value: "45", suffix: "%" },
+  { icon: HeartPulse, label: "IUI Success Rate", value: "30", suffix: "%" },
   { icon: Baby, label: "IVF Success Rate", value: "65", suffix: "%" },
   { icon: HeartHandshake, label: "Happy Couples", value: "1000", suffix: "+" },
   { icon: Trophy, label: "Years of Experience", value: "10", suffix: "+" },
