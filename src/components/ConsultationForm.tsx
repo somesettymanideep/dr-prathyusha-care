@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { User, Mail, Phone, Calendar, Stethoscope, ArrowRight } from "lucide-react";
 import consultationBg from "@/assets/consultation-bg.jpg";
+import { addSubmission } from "@/lib/submissions";
 
 const treatmentOptions = [
   "Ovulation Induction",
@@ -25,6 +26,7 @@ const ConsultationForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    addSubmission("consultation", form);
     toast.success("Your consultation request has been submitted! We'll contact you shortly.");
     setForm({ name: "", phone: "", email: "", treatment: "", date: "" });
   };

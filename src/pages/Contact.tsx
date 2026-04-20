@@ -8,12 +8,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
 import headerBg from "@/assets/page-header-bg.jpg";
+import { addSubmission } from "@/lib/submissions";
 
 const Contact = () => {
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", message: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    addSubmission("contact", form);
     toast.success("Message sent successfully! We'll get back to you soon.");
     setForm({ firstName: "", lastName: "", email: "", phone: "", message: "" });
   };
