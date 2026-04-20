@@ -86,7 +86,7 @@ const videoTestimonials = [
 ];
 
 const trustStats = [
-  { icon: Users, number: "150+", label: "Happy Families" },
+  { icon: Users, number: "1000+", label: "Happy Families" },
   { icon: Award, number: "10+", label: "Years Experience" },
   { icon: TrendingUp, number: "65%", label: "IVF Success Rate" },
   { icon: Heart, number: "100%", label: "Patient Dedication" },
