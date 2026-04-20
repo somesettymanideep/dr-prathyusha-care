@@ -242,7 +242,7 @@ const About = () => {
               </div>
             </div>
             <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
-              <img src={doctorHero} alt="Dr. Prathyusha at conference" className="w-full h-auto object-cover" />
+              <img src={doctorMemberships} alt="Dr. Prathyusha Javvadi at Ferti Centre" className="w-full h-auto object-cover" />
             </div>
           </div>
         </div>
