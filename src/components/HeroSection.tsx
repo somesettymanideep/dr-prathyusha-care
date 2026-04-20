@@ -26,7 +26,7 @@ const HeroSection = () => (
           </h1>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-xl font-body">
-            Dr.&nbsp;Prathyusha Javvadi — MBBS, MS&nbsp;(OBG), Fellowship in Reproductive Medicine — brings compassion and cutting-edge fertility care to every family she serves.
+            Dr.&nbsp;Prathyusha Javvadi — MBBS, MS&nbsp;(OBG), FRM, FMAS, Fellowship in Reproductive Medicine — brings compassion and cutting-edge fertility care to every family she serves.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-1">
@@ -46,7 +46,6 @@ const HeroSection = () => (
             {[
               { icon: Award, value: "10+", label: "Years Experience" },
               { icon: Baby, value: "1000+", label: "Happy Families" },
-              { icon: Heart, value: "95%", label: "Success Rate" },
             ].map((stat) => (
               <div key={stat.label} className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
