@@ -1,6 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import doctorAbout from "@/assets/dr-prathyusha-meet.png";
+import doctorAbout from "@/assets/dr-prathyusha-about.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const qualifications = [
