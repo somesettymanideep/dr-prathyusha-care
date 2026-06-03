@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { User, Mail, Phone, Calendar, Stethoscope, ArrowRight } from "lucide-react";
 import consultationBg from "@/assets/consultation-bg.jpg";
-import consultationVideo from "@/assets/consultation-baby.mp4.asset.json";
+import consultationVideo from "@/assets/consultation-baby.mp4";
 import { addSubmission } from "@/lib/submissions";
 
 const treatmentOptions = [
@@ -37,7 +37,7 @@ const ConsultationForm = () => {
       {/* Full background image */}
       <div className="absolute inset-0">
         <video
-          src={consultationVideo.url}
+          src={consultationVideo}
           poster={consultationBg}
           autoPlay
           loop
