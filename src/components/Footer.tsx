@@ -42,11 +42,11 @@ const Footer = () => (
         <div className="space-y-4">
           <h4 className="font-display font-semibold text-lg">Treatments</h4>
           <div className="space-y-2 text-sm">
-            <p className="opacity-80">IVF / ICSI</p>
-            <p className="opacity-80">IUI</p>
-            <p className="opacity-80">Fertility Preservation</p>
-            <p className="opacity-80">PGD</p>
-            <p className="opacity-80">Donor Treatments</p>
+            <Link to="/treatments/ivf" className="block opacity-80 hover:opacity-100 hover:text-primary-foreground transition-opacity">IVF / ICSI</Link>
+            <Link to="/treatments/iui" className="block opacity-80 hover:opacity-100 hover:text-primary-foreground transition-opacity">IUI</Link>
+            <Link to="/treatments/fertility-preservation" className="block opacity-80 hover:opacity-100 hover:text-primary-foreground transition-opacity">Fertility Preservation</Link>
+            <Link to="/treatments/pgt" className="block opacity-80 hover:opacity-100 hover:text-primary-foreground transition-opacity">PGD</Link>
+            <Link to="/treatments/iui" className="block opacity-80 hover:opacity-100 hover:text-primary-foreground transition-opacity">Donor Treatments</Link>
           </div>
         </div>
 
