@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { User, Mail, Phone, Calendar, Stethoscope, ArrowRight } from "lucide-react";
 import consultationBg from "@/assets/consultation-bg.jpg";
+import consultationVideo from "@/assets/consultation-baby.mp4.asset.json";
 import { addSubmission } from "@/lib/submissions";
 
 const treatmentOptions = [
@@ -35,9 +36,13 @@ const ConsultationForm = () => {
     <section className="relative py-20 overflow-hidden" ref={ref}>
       {/* Full background image */}
       <div className="absolute inset-0">
-        <img
-          src={consultationBg}
-          alt="Happy mother with baby"
+        <video
+          src={consultationVideo.url}
+          poster={consultationBg}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-background/70 lg:bg-gradient-to-r lg:from-background/95 lg:via-background/70 lg:to-transparent" />
