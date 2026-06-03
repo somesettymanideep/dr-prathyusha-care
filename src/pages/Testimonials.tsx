@@ -72,15 +72,15 @@ const textTestimonials = [
 
 const videoTestimonials = [
   {
-    name: "IVF Success Story",
+    name: "FIBROIDS",
     youtubeId: "ldd3ry2_G1s",
   },
   {
-    name: "Patient Happy Moments",
+    name: "About Pregnancy",
     youtubeId: "QZsHEuxZMy0",
   },
   {
-    name: "Fertility Treatment Journey",
+    name: "Toothpaste VS Abortions",
     youtubeId: "fOpWVXkp9tA",
   },
 ];
