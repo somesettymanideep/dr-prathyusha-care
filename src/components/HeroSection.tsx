@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Phone, Award, Heart, Baby } from "lucide-react";
-import doctorImg from "@/assets/dr-prathyusha-hero-nobg.png.asset.json";
+import doctorImg from "@/assets/dr-prathyusha-hero-nobg.png";
 
 const HeroSection = () => (
   <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-accent via-background to-muted">
@@ -68,7 +68,7 @@ const HeroSection = () => (
           {/* Doctor image — natural shape, no background */}
           <div className="relative z-10 w-[75%] max-w-[380px]">
             <img
-              src={doctorImg.url}
+              src={doctorImg}
               alt="Dr. Prathyusha Javvadi — Fertility Specialist"
               className="w-full h-auto object-contain"
             />
