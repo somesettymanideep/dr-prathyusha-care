@@ -52,7 +52,7 @@ const AboutSection = () => {
               ))}
             </div>
             <Button variant="hero" asChild>
-              <a href="#consultation">Book a Consultation</a>
+              <a href="/#contact">Book a Consultation</a>
             </Button>
           </div>
         </div>
