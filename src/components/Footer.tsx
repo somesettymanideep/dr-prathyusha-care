@@ -78,8 +78,7 @@ const Footer = () => (
             href="https://ayrondigitalsolutions.com/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{ color: "#6a3e74" }}
-            className="hover:underline font-medium"
+            className="text-white font-bold hover:underline"
           >
             Ayron Digital Solutions
           </a>
