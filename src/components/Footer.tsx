@@ -72,7 +72,18 @@ const Footer = () => (
     <div className="relative z-10 bg-primary">
       <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between text-sm text-primary-foreground">
         <p>© {new Date().getFullYear()} Dr. Prathyusha Javvadi. All rights reserved.</p>
-        <p className="opacity-80 mt-1 sm:mt-0">Designed and Developed by Ayron Digital Solutions</p>
+        <p className="opacity-80 mt-1 sm:mt-0">
+          Designed and Developed by{" "}
+          <a
+            href="https://ayrondigitalsolutions.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#6a3e74" }}
+            className="hover:underline font-medium"
+          >
+            Ayron Digital Solutions
+          </a>
+        </p>
       </div>
     </div>
   </footer>
